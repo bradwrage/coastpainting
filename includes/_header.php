@@ -17,9 +17,9 @@
         <li><a href="index.php">Home</a></li>
         <li><a href="about.php">About</a></li>
         <li><a href="technology.php">Technology</a></li>
-        <li><a href="new.php">News</a></li>
-        <li><a href="new.php">Jobs</a></li>
-        <li><a href="new.php">Contact</a></li>
+        <li><a href="news.php">News</a></li>
+        <li><a href="jobs.php">Jobs</a></li>
+        <li><a href="contact.php">Contact</a></li>
       </ul>
     </div>
   </div>

@@ -1,0 +1,40 @@
+.phone-info {
+	font-weight: 200;
+	span {
+		display: block;
+		margin-bottom: 15px;
+		padding-left: 70px;
+		line-height: 24px;
+	}
+}
+
+.map-picture {
+	padding-right: 60px;
+	padding-top: 20px;
+}
+
+.phone-svg {
+	position: absolute;
+	width: 40px;
+}
+
+.address-svg {
+	position: absolute;
+	top: 181px;
+	width: 32px;
+}
+
+.address {
+	padding-top: 15px;
+}
+
+.submit-btn {
+		text-decoration: none !important;
+		padding-left: 3rem;
+		padding-right: 3rem;
+		font-weight: 300 !important;
+}
+
+.contact-row {
+	margin-bottom: 160px;
+}
