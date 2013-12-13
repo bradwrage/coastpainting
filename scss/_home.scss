@@ -2,6 +2,24 @@ section {
 	margin-bottom: 60px;
 }
 
+.child-header-container {
+	background-color: gray;
+	height: 300px;
+	margin-bottom: 60px;
+	.hero-title {
+		color: white;
+		text-align: center;
+		padding-top: 80px;
+	}
+	.header-subtitle {
+		color: white;
+		font-size: 24px;
+		text-align: center;
+		margin-bottom: 20px;
+
+	}
+}
+
 .wrapper-container {
 	background-color: gray;
 	height: 500px;
@@ -18,8 +36,9 @@ section {
 		margin-bottom: 20px;
 
 	}
+}
 
-	.hero-cta {
+	.centered-btn {
 		text-align: center;
 		margin: 0 auto;
 		a {
@@ -27,8 +46,13 @@ section {
 			text-transform: uppercase;
 		}
 	}
-}
 
+
+.larger-body-text {
+	font-size: 16px;
+	font-weight: 300;
+
+}
 .top-nav {
 	height: 60px;
 }
@@ -94,8 +118,8 @@ section {
 
 .the-team {
 	.team-pic {
-		height:100px;
-		width: 80px;
+		height:200px;
+		width: 180px;
 		background-color: gray;
 	}
 }

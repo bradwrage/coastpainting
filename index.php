@@ -2,28 +2,15 @@
 
 <?php include("includes/_header.php"); ?>
 
-<body>
-<div class="top-nav">
-  <div class="row">
-    <div class="large-12 columns">
-      <img class="logo" src="/assets/images/circuit-logo.svg">
-      <ul class="nav">
-        <li><a href="">Home</a></li>
-        <li><a href="">Home</a></li>
-        <li><a href="">Home</a></li>
-        <li><a href="">Home</a></li>
-      </ul>
-    </div>
-  </div>
-</div>
+
 <section class="wrapper-container">
   <div class="row">
     <div class="large-12 columns">
       <h1 class="hero-title">Circuit Therapeutics</h1>
       <h2 class="header-subtitle">The industry leader in optogenetics developing breakthrough therapeutic interventions transforming the field of drug discovery</h2>
     </div>
-  <div class="hero-cta">
-    <a href="#" class="button [radius round] hero-cta">Learn More</a>
+  <div class="centered-btn">
+    <a href="#" class="button centered-btn">Learn More</a>
   </div>
   </div>
 </section>
@@ -34,7 +21,7 @@
   <div class="row">
     <div class="large-12 columns">
       <h2 class="section-header">Leader in Optogenics</h2>
-      <h3 class="section-subheader">We are incredibly exciting to see what technology has allowed us to do. With optogenics we have explored and found amazing possibilities.</h3>
+      <h5 class="section-subheader">We are incredibly exciting to see what technology has allowed us to do. With optogenics we have explored and found amazing possibilities.</h3>
     </div>
   </div>
   <div class="row section-top">
@@ -62,7 +49,7 @@
   <div class="row">
     <div class="large-12 columns">
       <h2 class="section-header">How it Works</h2>
-      <h3 class="section-subheader">Incredible advancements in neuroscience that has allowed for ways to control the human nervous system to beat genetic disorders and deficiencies.</h3>
+      <h5 class="section-subheader">Incredible advancements in neuroscience that has allowed for ways to control the human nervous system to beat genetic disorders and deficiencies.</h3>
     </div>
   </div>
 
@@ -93,7 +80,7 @@
   <div class="row">
     <div class="large-12 columns">
       <h2 class="section-header">The Team</h2>
-      <h3 class="section-subheader">Incredible advancements in neuroscience that has allowed for ways to control the human nervous system to beat genetic disorders and deficiencies.</h3>
+      <h5 class="section-subheader">Incredible advancements in neuroscience that has allowed for ways to control the human nervous system to beat genetic disorders and deficiencies.</h3>
     </div>
   </div>
   <div class="row">
@@ -135,7 +122,7 @@
   <div class="row">
     <div class="large-12 columns">
       <h2 class="section-header">The Press</h2>
-      <h3 class="section-subheader">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer ac elit id quam viverra faucibus non in mi. Fusce eu pellentesque mauris. Pellentesque quis accumsan nibh.</h3>
+      <h5 class="section-subheader">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer ac elit id quam viverra faucibus non in mi. Fusce eu pellentesque mauris. Pellentesque quis accumsan nibh.</h3>
     </div>
   </div>
 
