@@ -1,0 +1,122 @@
+section {
+	margin-bottom: 60px;
+}
+
+.wrapper-container {
+	background-color: gray;
+	height: 500px;
+	margin-bottom: 60px;
+	.hero-title {
+		color: white;
+		text-align: center;
+		padding-top: 100px;
+	}
+	.header-subtitle {
+		color: white;
+		font-size: 24px;
+		text-align: center;
+		margin-bottom: 20px;
+
+	}
+
+	.hero-cta {
+		text-align: center;
+		margin: 0 auto;
+		a {
+			font-weight: 200 !important;
+			text-transform: uppercase;
+		}
+	}
+}
+
+.top-nav {
+	height: 60px;
+}
+.nav {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+	text-align: center;
+	float: right;
+	padding-top: 6px;
+	li {
+		display: inline;
+		a {
+			display: inline-block;
+			padding: 10px;
+		}
+	}
+}
+
+.section-header {
+	text-align: center;
+
+}
+.section-subheader {
+	text-align: center;
+	margin-bottom: 50px;
+}
+.main-content {
+	font-size: 18px;
+	font-weight: 300;
+}
+
+.about-circuit {
+	p {
+
+	}
+
+	.about-item-title {
+		text-align: center;
+	}
+}
+.half-image {
+	background-color: gray;
+	height: 300px;
+	weight: 200px;
+}
+.how-it-works {
+	.content-row {
+		margin-bottom: 60px;
+	}
+	.research {
+		padding-left: 60px;
+	}
+}
+
+	.about-item-image {
+		height: 200px;
+		width: 300px;
+		background-color: gray;
+		margin-bottom: 20px;
+	}
+// The team
+
+.the-team {
+	.team-pic {
+		height:100px;
+		width: 80px;
+		background-color: gray;
+	}
+}
+
+// The press
+
+.in-the-press {
+	.row-margin {
+		margin-bottom: 60px;
+	}
+	.quoted-text {
+		font-style: italic;
+	}
+
+	.source {
+		font-weight: 300;
+	}
+
+	.image {
+		width: 300px;
+		height: 200px;
+		background-color: gray;
+	}
+}
