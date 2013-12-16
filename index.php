@@ -25,18 +25,18 @@
     </div>
   </div>
   <div class="row section-top">
-    <div class="large-4 columns">
-      <div class="about-item-image"></div>
+    <div class="large-4 columns about-category">
+      <img class="light-bulb" src="/assets/images/light-bulb.svg">
       <h3 class="about-item-title">Years of Research</h3>
       <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Labore, ducimus ipsa placeat autem aut deleniti quos sunt quae veniam. Asperiores, repellendus, quia autem ex nihil ad consequuntur ab numquam dolore.</p>
     </div>
-     <div class="large-4 columns">
-      <div class="about-item-image"></div>
+     <div class="large-4 columns about-category">
+       <img class="partners" src="/assets/images/partners.svg">
       <h3 class="about-item-title">Key Partners</h3>
       <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Labore, ducimus ipsa placeat autem aut deleniti quos sunt quae veniam. Asperiores, repellendus, quia autem ex nihil ad consequuntur ab numquam dolore.</p>
     </div>
-     <div class="large-4 columns">
-      <div class="about-item-image"></div>
+     <div class="large-4 columns about-category">
+       <img class="heart" src="/assets/images/heart.svg">
       <h3 class="about-item-title">Big Dreams</h3>
       <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Labore, ducimus ipsa placeat autem aut deleniti quos sunt quae veniam. Asperiores, repellendus, quia autem ex nihil ad consequuntur ab numquam dolore.</p>
     </div>

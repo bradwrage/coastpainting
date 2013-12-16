@@ -27,8 +27,8 @@ section {
 }
 
 .wrapper-container {
-	background-color: gray;
-	height: 500px;
+	background: url('/assets/images/home-hero.png')  no-repeat center center;
+	height: 400px;
 	margin-bottom: 60px;
 	.hero-title {
 		color: white;
@@ -42,6 +42,14 @@ section {
 		margin-bottom: 20px;
 
 	}
+	@media only screen and (max-width: 700px) { 
+	 .hero-title {
+	 	padding-top: 30px;
+	 }
+	 .header-subtitle {
+	 	font-size: 18px;
+	 }
+	} 
 }
 
 	.centered-btn {
@@ -75,8 +83,26 @@ section {
 }
 
 .about-circuit {
+	.about-category {
+		img {
+			margin: 0 auto;
+			text-align: center;
+			display: block;
+			margin-bottom: 20px;
+			&.light-bulb {
+				width: 25%;
+			}
+			&.partners {
+				width: 34%;
+			}
+			&.heart {
+				width: 24%;
+			}
+		}
+	}
 	p {
-
+		font-weight: 300;
+		font-size: 14px;
 	}
 
 	.about-item-title {
