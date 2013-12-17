@@ -10,10 +10,10 @@
 
 <body>
   <div id="wrapper">
-    <div class="top-nav">
+    <div class="top-nav2">
       <div class="row">
         <div class="large-12 columns centered">
-          <a href="index.php"><img class="logo" src="/assets/images/circuit-logo.svg"></a>
+          <a href="index.php"><img class="logo" src="assets/images/circuit-logo.svg"></a>
         </div>
       </div>
     </div>

@@ -21,12 +21,12 @@
 		<div class="large-6 columns">
 			<h4>Location Information</h4>
 			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minus, provident, tenetur, </p>
-			<img class="phone-svg" src="/assets/images/phone.svg">
-			<img class="address-svg" src="/assets/images/address.svg">
+			<img class="phone-svg" src="assets/images/phone.svg">
+			<img class="address-svg" src="assets/images/address.svg">
 			<div class="phone-info">
 				<span class="phone">Phone: 1.253.365 <br />Fax: 408.172.1523</span>
 				<span class="address">Address: 1.253.365</span>
-				<img class="map-picture" src="/assets/images/map.png">
+				<img class="map-picture" src="assets/images/map.png">
 			</div>
 		</div>
 		<div class="large-6 columns">

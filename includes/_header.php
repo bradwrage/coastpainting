@@ -12,7 +12,7 @@
   	<div class="top-nav">
   <div class="row">
     <div class="large-12 columns">
-      <a href="index2.php"><img class="logo" src="/assets/images/circuit-logo.svg"></a>
+      <a href="index2.php"><img class="logo" src="assets/images/circuit-logo.svg"></a>
       <ul class="nav">
         <li><a href="technology.php">Technology</a></li>
          <li><a href="about.php">About</a></li>

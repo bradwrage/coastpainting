@@ -4,7 +4,7 @@
 <section class="child-header-container">
   <div class="row">
     <div class="large-12 columns">
-      <h1 class="hero-title">Circuit Therapeuitics Technology</h1>
+      <h1 class="hero-title">Circuit Therapeutics Technology</h1>
       <h2 class="header-subtitle">Incredible advancement in technology that will change the way we look at human cell interaction forever.</h2>
     </div>
 
@@ -26,12 +26,12 @@
 			<a href="">Learn More</a>
 		</div>
 		<div class="large-6 columns">
-			 <img class="" src="/assets/images/scientist.png">
+			 <img class="" src="assets/images/scientist.png">
 		</div>
 	</div>
 	<div class="row bottom-space">
 		<div class="large-6 columns">
-			 <img class="" src="/assets/images/science.jpg">
+			 <img class="" src="assets/images/science.jpg">
 		</div>
 		<div class="large-6 columns right-text">
 			<h5>Lorem ipsum dolor sit amet, consectetur.</h5>
@@ -57,12 +57,12 @@
 			<a href="">Learn More</a>
 		</div>
 		<div class="large-6 columns">
-			<img class="" src="/assets/images/white-brain.jpg">
+			<img class="" src="assets/images/white-brain.jpg">
 		</div>
 	</div>
 	<div class="row bottom-space">
 		<div class="large-6 columns">
-			<img class="" src="/assets/images/nerve-cell.jpg">
+			<img class="" src="assets/images/nerve-cell.jpg">
 		</div>
 		<div class="large-6 columns right-text">
 			<h5>Lorem ipsum dolor sit amet, consectetur.</h5>

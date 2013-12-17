@@ -19,5 +19,5 @@
      <script src="js/jquery.backstretch.js"></script>
     <script src="js/app.js"></script>
     <script>
-    $("#wrapper").backstretch("/assets/images/home-hero.png");
+    $("#wrapper").backstretch("assets/images/home-hero.png");
     </script>

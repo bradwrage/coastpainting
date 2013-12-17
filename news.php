@@ -21,7 +21,7 @@
 	
 	<div class="row press-releases">
 		<div class="large-4 columns">
-			<img class="inc-logo" src="/assets/images/inc.png">
+			<img class="inc-logo" src="assets/images/inc.png">
 		</div>
 		<div class="large-8 columns content-right">
 			<h4>TechCrunch</h4>
@@ -32,7 +32,7 @@
 
 	<div class="row press-releases">
 		<div class="large-4 columns">
-			<img class="tech-crunch" src="/assets/images/tech-crunch.png">
+			<img class="tech-crunch" src="assets/images/tech-crunch.png">
 		</div>
 		<div class="large-8 columns content-right">
 			<h4>TechCrunch</h4>
@@ -43,7 +43,7 @@
 
 	<div class="row press-releases">
 		<div class="large-4 columns">
-			<img class="gigaom" src="/assets/images/gigaom.png">
+			<img class="gigaom" src="assets/images/gigaom.png">
 		</div>
 		<div class="large-8 columns content-right">
 			<h4>TechCrunch</h4>
@@ -67,7 +67,7 @@
       <ul class="small-block-grid-3 alternate-grid">
       <li>
         <div class="person-container">
-          <img class="advisor-pic paper" src="/assets/images/paper.png">
+          <img class="advisor-pic paper" src="assets/images/paper.png">
             <div class="right-about">
              <h5 class="name">Title</h5>
             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
@@ -76,7 +76,7 @@
       </li>
       <li> 
         <div class="person-container">
-            <img class="advisor-pic paper" src="/assets/images/paper.png">
+            <img class="advisor-pic paper" src="assets/images/paper.png">
             <div class="right-about">
              <h5 class="name">Title</h5>
             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
@@ -85,7 +85,7 @@
       </li>
       <li>
          <div class="person-container">
-          <img class="advisor-pic paper" src="/assets/images/paper.png">
+          <img class="advisor-pic paper" src="assets/images/paper.png">
             <div class="right-about">
              <h5 class="name">Title</h5>
             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
@@ -95,7 +95,7 @@
 
            <li>
         <div class="person-container">
-            <img class="advisor-pic paper" src="/assets/images/paper.png">
+            <img class="advisor-pic paper" src="assets/images/paper.png">
             <div class="right-about">
             <h5 class="name">Title</h5>
             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
@@ -104,7 +104,7 @@
       </li>
            <li>
         <div class="person-container">
-             <img class="advisor-pic paper" src="/assets/images/paper.png">
+             <img class="advisor-pic paper" src="assets/images/paper.png">
             <div class="right-about">
             <h5 class="name">Title</h5>
             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
@@ -113,7 +113,7 @@
       </li>
                  <li>
         <div class="person-container">
-             <img class="advisor-pic paper" src="/assets/images/paper.png">
+             <img class="advisor-pic paper" src="assets/images/paper.png">
             <div class="right-about">
             <h5 class="name">Title</h5>
             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>

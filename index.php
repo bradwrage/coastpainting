@@ -26,17 +26,17 @@
   </div>
   <div class="row section-top">
     <div class="large-4 columns about-category">
-      <img class="light-bulb" src="/assets/images/light-bulb.svg">
+      <img class="light-bulb" src="assets/images/light-bulb.svg">
       <h3 class="about-item-title">Years of Research</h3>
       <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Labore, ducimus ipsa placeat autem aut deleniti quos sunt quae veniam. Asperiores, repellendus, quia autem ex nihil ad consequuntur ab numquam dolore.</p>
     </div>
      <div class="large-4 columns about-category">
-       <img class="partners" src="/assets/images/partners.svg">
+       <img class="partners" src="assets/images/partners.svg">
       <h3 class="about-item-title">Key Partners</h3>
       <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Labore, ducimus ipsa placeat autem aut deleniti quos sunt quae veniam. Asperiores, repellendus, quia autem ex nihil ad consequuntur ab numquam dolore.</p>
     </div>
      <div class="large-4 columns about-category">
-       <img class="heart" src="/assets/images/heart.svg">
+       <img class="heart" src="assets/images/heart.svg">
       <h3 class="about-item-title">Big Dreams</h3>
       <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Labore, ducimus ipsa placeat autem aut deleniti quos sunt quae veniam. Asperiores, repellendus, quia autem ex nihil ad consequuntur ab numquam dolore.</p>
     </div>
@@ -54,7 +54,7 @@
 
   <div class="row content-row">
     <div class="large-6 columns">
-    <img class="" src="/assets/images/scientist.png">
+    <img class="" src="assets/images/scientist.png">
     </div>
     <div class="large-6 columns research">
       <h3>Optogenetics</h3>
@@ -68,7 +68,7 @@
 
     </div>
     <div class="large-6 columns research">
-        <img class="" src="/assets/images/science.jpg">
+        <img class="" src="assets/images/science.jpg">
     </div>
   </div>
 </section>
@@ -85,7 +85,7 @@
       <ul class="small-block-grid-3 alternate-grid">
       <li>
         <div class="person-container">
-          <img class="advisor-pic" src="/assets/images/advisors/karl.png">
+          <img class="advisor-pic" src="assets/images/advisors/karl.png">
             <div class="right-about">
              <h5 class="name">Karl Deisseroth, <span>MD, PhD</span></h5>
             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
@@ -94,7 +94,7 @@
       </li>
       <li> 
         <div class="person-container">
-         <img class="advisor-pic" src="/assets/images/advisors/scott.png">
+         <img class="advisor-pic" src="assets/images/advisors/scott.png">
             <div class="right-about">
             <h5 class="name">Scott Delp, <span>PhD</span></h5>
             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
@@ -103,7 +103,7 @@
       </li>
       <li>
          <div class="person-container">
-        <img class="advisor-pic" src="/assets/images/advisors/anatol.png">
+        <img class="advisor-pic" src="assets/images/advisors/anatol.png">
             <div class="right-about">
             <h5 class="name">Anatol Kreitzer, <span>PhD</span></h5>
             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
@@ -113,7 +113,7 @@
 
            <li>
         <div class="person-container">
-          <img class="advisor-pic" src="/assets/images/advisors/rob.png">
+          <img class="advisor-pic" src="assets/images/advisors/rob.png">
             <div class="right-about">
             <h5 class="name">Rob Malenka, <span>MD, PhD</span></h5>
             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
@@ -122,7 +122,7 @@
       </li>
            <li>
         <div class="person-container">
-           <img class="advisor-pic" src="/assets/images/advisors/thomas.png">
+           <img class="advisor-pic" src="assets/images/advisors/thomas.png">
             <div class="right-about">
             <h5 class="name">Thomas Südhof, <span>MD</span></h5>
             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
@@ -131,7 +131,7 @@
       </li>
           <li>
         <div class="person-container">
-           <img class="advisor-pic" src="/assets/images/advisors/thomas.png">
+           <img class="advisor-pic" src="assets/images/advisors/thomas.png">
             <div class="right-about">
             <h5 class="name">Thomas Südhof, <span>MD</span></h5>
             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
@@ -152,7 +152,7 @@
   </div>
   <div class="row row-margin">
     <div class="large-4 columns large-offset-1">
-      <img class="" src="/assets/images/inc.png">
+      <img class="" src="assets/images/inc.png">
     </div>
     <div class="large-6 columns">
       <h5 class="quoted-text ">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer ac elit id quam viverra faucibus non in mi. </h5>
@@ -162,7 +162,7 @@
 
   <div class="row row-margin">
     <div class="large-4 columns large-offset-1">
-     <img class="" src="/assets/images/tech-crunch.png">
+     <img class="" src="assets/images/tech-crunch.png">
     </div>
     <div class="large-6 columns">
       <h5 class="quoted-text ">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer ac elit id quam viverra faucibus non in mi. </h5>
@@ -172,7 +172,7 @@
 
   <div class="row ">
     <div class="large-4 columns large-offset-1">
-      <img class="" src="/assets/images/gigaom.png">
+      <img class="" src="assets/images/gigaom.png">
     </div>
     <div class="large-6 columns">
       <h5 class="quoted-text ">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer ac elit id quam viverra faucibus non in mi. </h5>
