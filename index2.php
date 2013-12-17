@@ -9,38 +9,28 @@
   </head>
 
 <body>
-  
   <div id="wrapper">
     <div class="top-nav">
       <div class="row">
-        <div class="large-12 columns">
-          <!-- <a href="index.php"><img class="logo" src="/assets/images/circuit-logo.svg"></a> -->
-          <ul class="nav">
-            <li><a href="index.php">Home</a></li>
-            <li><a href="about.php">About</a></li>
-            <li><a href="technology.php">Technology</a></li>
-            <li><a href="news.php">News</a></li>
-            <li><a href="jobs.php">Jobs</a></li>
-            <li><a href="contact.php">Contact</a></li>
-          </ul>
+        <div class="large-12 columns centered">
+          <a href="index.php"><img class="logo" src="/assets/images/circuit-logo.svg"></a>
         </div>
       </div>
     </div>
 
 <section class="background-photo">
-
   <div class="row">
     <div class="large-12 columns">
-      <h1 class="hero-title">Hero</h1>
-      <h2 class="header-subtitle">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quia, hic, animi, illo ad neque possimus ab consequatur magni nisi esse a libero eaque? Deleniti, dolores dolor iure cupiditate qui omnis?</h2>
+      <h1 class="hero-title">Circuit Therapeutics</h1>
+      <h2 class="header-subtitle">The industry leader in optogenetics developing breakthrough therapeutic interventions transforming the field of drug discovery</h2>
     </div>
   <div class="centered-btn">
-    <a href="#" class="button centered-btn">Learn More</a>
+     <a href="technology.php" class="custom-btn">Learn More</a>
   </div>
   </div>
   </section>
-
-    </div>
+  </div>
+      <div class="push"></div>
   <?php include("includes/_footer2.php"); ?>
 
 

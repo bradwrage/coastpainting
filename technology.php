@@ -26,12 +26,12 @@
 			<a href="">Learn More</a>
 		</div>
 		<div class="large-6 columns">
-			<div class="half-image"></div>
+			 <img class="" src="/assets/images/scientist.png">
 		</div>
 	</div>
 	<div class="row bottom-space">
 		<div class="large-6 columns">
-			<div class="half-image"></div>
+			 <img class="" src="/assets/images/science.jpg">
 		</div>
 		<div class="large-6 columns right-text">
 			<h5>Lorem ipsum dolor sit amet, consectetur.</h5>
@@ -39,7 +39,7 @@
 			<a href="">Learn More</a>
 		</div>
 	</div>
-	<hr />
+	
 </section>
 
 <section class="main-section">
@@ -57,12 +57,12 @@
 			<a href="">Learn More</a>
 		</div>
 		<div class="large-6 columns">
-			<div class="half-image"></div>
+			<img class="" src="/assets/images/white-brain.jpg">
 		</div>
 	</div>
 	<div class="row bottom-space">
 		<div class="large-6 columns">
-			<div class="half-image"></div>
+			<img class="" src="/assets/images/nerve-cell.jpg">
 		</div>
 		<div class="large-6 columns right-text">
 			<h5>Lorem ipsum dolor sit amet, consectetur.</h5>
@@ -70,7 +70,6 @@
 			<a href="">Learn More</a>
 		</div>
 	</div>
-<hr />
 </section>
 
 <section class="bottom-action">

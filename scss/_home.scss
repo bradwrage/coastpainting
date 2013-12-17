@@ -1,7 +1,12 @@
 section {
 	margin-bottom: 60px;
 }
-
+.white {
+	color: white;
+}
+.blue {
+	color: #05568B;
+}
 .last {
 	margin-bottom: 200px !important;
 }
@@ -9,21 +14,34 @@ section {
 		margin-bottom: 60px;
 	}
 .child-header-container {
-	background-color: gray;
+	background: url('/assets/images/home-hero.png')  no-repeat center center;
 	height: 300px;
 	margin-bottom: 60px;
 	.hero-title {
 		color: white;
 		text-align: center;
 		padding-top: 80px;
+		 -webkit-font-smoothing: antialiased;
 	}
 	.header-subtitle {
 		color: white;
 		font-size: 24px;
 		text-align: center;
 		margin-bottom: 20px;
-
+		 -webkit-font-smoothing: antialiased;
 	}
+}
+
+.custom-btn {
+  @include button-base;
+  @include button-size;
+  @include button-style( rgba(0, 0, 0, 0), 2px);
+  border: 2px solid white;
+  @include single-transition;
+  &:hover {
+
+  }
+
 }
 
 .wrapper-container {
@@ -34,13 +52,14 @@ section {
 		color: white;
 		text-align: center;
 		padding-top: 100px;
+		-webkit-font-smoothing: antialiased;
 	}
 	.header-subtitle {
 		color: white;
 		font-size: 24px;
 		text-align: center;
 		margin-bottom: 20px;
-
+		-webkit-font-smoothing: antialiased;
 	}
 	@media only screen and (max-width: 700px) { 
 	 .hero-title {
@@ -58,6 +77,7 @@ section {
 		a {
 			font-weight: 200 !important;
 			text-transform: uppercase;
+			background-color: none;
 		}
 	}
 
@@ -71,18 +91,22 @@ section {
 
 .section-header {
 	text-align: center;
-
+	-webkit-font-smoothing: antialiased;
 }
 .section-subheader {
 	text-align: center;
 	margin-bottom: 50px;
+	-webkit-font-smoothing: antialiased;
 }
 .main-content {
-	font-size: 18px;
+	font-size: 16px;
 	font-weight: 300;
+	color: #3f3f3f;
+	-webkit-font-smoothing: antialiased;
 }
 
 .about-circuit {
+	margin-bottom: 50px;
 	.about-category {
 		img {
 			margin: 0 auto;
@@ -91,6 +115,7 @@ section {
 			margin-bottom: 20px;
 			&.light-bulb {
 				width: 25%;
+				margin-bottom: 10px !important;
 			}
 			&.partners {
 				width: 34%;
@@ -115,7 +140,9 @@ section {
 	weight: 200px;
 }
 .how-it-works {
-	
+	background-color: #EEEEEE;
+	padding: 40px 0;
+	margin-bottom: 0px !important;
 	.research {
 		padding-left: 60px;
 	}
@@ -130,21 +157,45 @@ section {
 // The team
 
 .the-team {
-	.team-pic {
-		height:200px;
-		width: 180px;
-		background-color: gray;
+	margin-bottom: 0px !important;
+	padding-bottom: 22px;
+	img {
+		margin-bottom: 12px;
+	}
+
+	li {
+		padding-right: 90px;
+	}
+	.name {
+		font-size: 16px !important;
+		font-weight: 400;
+		margin-bottom: 0px;
+		span {
+			font-size: 11px;
+		}
+	}
+	h6 {
+		font-size: 12px;
+	}
+	p {
+		font-size: 12px;
+		font-weight: 300;
 	}
 }
 
 // The press
 
 .in-the-press {
+	background-color: #EEEEEE;
+	margin-bottom: 0px;
+	padding: 60px 0;
 	.row-margin {
 		margin-bottom: 60px;
 	}
 	.quoted-text {
 		font-style: italic;
+		font-weight: 300;
+		color: #6d6d6d;
 	}
 
 	.source {

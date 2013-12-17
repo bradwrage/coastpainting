@@ -1,4 +1,6 @@
 .top-nav {
+	z-index: 99999;
+	background-color: white;
 	height: 60px;
 		.logo {
 		height: 40px;
@@ -11,13 +13,20 @@
 	padding: 0;
 	text-align: center;
 	float: right;
-	padding-top: 6px;
+	padding-top: 11px;
 	li {
 		display: inline;
+		text-transform: uppercase;
 		a {
+			-webkit-font-smoothing: antialiased;
 			display: inline-block;
 			padding: 10px;
-			font-weight: 300;
+			font-weight: 500;
+			color: #595757;
+			font-size: 12px;
+			&:hover {
+				text-decoration: underline;
+			}
 		}
 	}
 

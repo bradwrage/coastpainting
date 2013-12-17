@@ -72,18 +72,18 @@
 
 	</div>
 </div>
-<hr />
 </section>
 
-<section class="get-in-touch">
-	<div class="row">
-		<div class="large-12 columns ">
-			<h2 class="section-header">Get in Touch</h2>
-      <h5 class="section-subheader">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Culpa, vel, vero, necessitatibus aliquam porro excepturi .</h3>
-		</div>
-	</div>
-	  <div class="centered-btn">
-    <a href="#" class="button centered-btn">Get in Touch</a>
+<section class="bottom-action">
+  <div class="row">
+    <div class="large-12 columns">
+      <h2 class="section-header">Get in Touch</h2>
+      <h5 class="section-subheader">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eius, nemo, tempore omnis suscipit distinctio deleniti perspiciatis expedita ut voluptas maiores ex aperiam rem illo eveniet voluptate natus in ducimus asperiores!</h3>
+    </div>
+  </div>
+
+  <div class="centered-btn">
+    <a href="#" class="button centered-btn">Contact Us</a>
   </div>
 </section>
 

@@ -13,13 +13,6 @@
   <div class="row">
     <div class="large-12 columns">
       <a href="index2.php"><img class="logo" src="/assets/images/circuit-logo.svg"></a>
-      <ul class="nav">
-        <li><a href="technology.php">Technology</a></li>
-         <li><a href="about.php">About</a></li>
-        <li><a href="news.php">News</a></li>
-        <li><a href="jobs.php">Jobs</a></li>
-        <li><a href="contact.php">Contact</a></li>
-      </ul>
     </div>
   </div>
 </div>
