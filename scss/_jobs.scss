@@ -3,5 +3,28 @@
 	.job-category-title {
 		padding-top: 12px;
 	}
+}
+.job-category-title {
+	font-weight: 500;
+}
 
+.job-container {
+	background-color: #EEEEEE;
+	padding: 30px;
+	p {
+		font-size: 12px;
+	}
+	ul {
+		li {
+			font-size: 12px;
+		}
+	}
+	h6 {
+		font-weight: 400;
+		padding-top: 15px;
+	}
+}
+
+.job-bottom {
+	padding-bottom: 201px;
 }

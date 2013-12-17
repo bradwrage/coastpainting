@@ -72,13 +72,7 @@
           </p>
         </div>
       </li>
-      <li>
-          <img class="team-pic" src="assets/images/team/bill1.png">
-         <div class="person-about">  
-          <h5 class="name">David Lundmark, <span>MBA, JD</span></h5>
-          <p>David Lundmark joined Circuit Therapeutics as General Counsel in 2012 and has been engaged with the company since its founding.  Previously he was a partner in the Saratoga, CA office of Vista IP Law Group.  Prior to Vista, Mr. Lundmark served as Senior Vice President and General Counsel of The WorkCard Company, Senior Counsel for Intel Corporation, Vice President of Legal Affairs for Hansen Medical, Inc., and as a patent and corporate finance attorney with Morrison & Foerster LLP.  He holds a B.S., a J.D., and an M.B.A. from the University of California at Davis.</p>
-        </div>
-        </li>
+
       </ul>
     </div>
   </div>

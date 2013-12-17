@@ -58,13 +58,14 @@
     </div>
     <div class="large-6 columns research">
       <h3>Optogenetics</h3>
-      <p class="main-content">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Commodi, illo error natus quibusdam incidunt labore officia iusto facere ducimus repellendus ex fugit aperiam nulla deleniti quod quae doloremque numquam quo.</p>
+      <p class="main-content">Circuit Therapeutics is the industry leader in optogenetics and is pioneering new treatments through the use of this groundbreaking technology.  Optogenetics has gained rapid acceptance globally and is being used by hundreds of laboratories worldwide</p>
     </div>
   </div>
   <div class="row content-row">
     <div class="large-6 columns">
       <h3>Incredible Findings</h3>
-      <p class="main-content">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Commodi, illo error natus quibusdam incidunt labore officia iusto facere ducimus repellendus ex fugit aperiam nulla deleniti quod quae doloremque numquam quo.</p>
+      <p class="main-content">Through region-specific injection of viral vectors containing cell-type specific promoters, opsins can be targeted with a high degree of specificity to particular neurons of interest. The opsin-activating light can be directed to specific locations in the brain, providing yet another region-specific targeting capacity of optogenetics.
+      </p></p>
 
     </div>
     <div class="large-6 columns research">
