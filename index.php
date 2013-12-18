@@ -152,8 +152,8 @@
     </div>
   </div>
   <div class="row row-margin">
-    <div class="large-4 columns large-offset-1">
-      <img class="" src="assets/images/inc.png">
+    <div class="large-4 columns large-offset-2">
+      <img class="logo-image" src="assets/images/logos/gigaom.png">
     </div>
     <div class="large-6 columns">
       <h5 class="quoted-text ">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer ac elit id quam viverra faucibus non in mi. </h5>
@@ -162,8 +162,8 @@
   </div>
 
   <div class="row row-margin">
-    <div class="large-4 columns large-offset-1">
-     <img class="" src="assets/images/tech-crunch.png">
+    <div class="large-4 columns large-offset-2">
+     <img class="logo-image" src="assets/images/logos/techcrunch.png">
     </div>
     <div class="large-6 columns">
       <h5 class="quoted-text ">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer ac elit id quam viverra faucibus non in mi. </h5>
@@ -172,8 +172,8 @@
   </div>
 
   <div class="row ">
-    <div class="large-4 columns large-offset-1">
-      <img class="" src="assets/images/gigaom.png">
+    <div class="large-4 columns large-offset-2">
+      <img class="logo-image" src="assets/images/logos/mashable.png">
     </div>
     <div class="large-6 columns">
       <h5 class="quoted-text ">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer ac elit id quam viverra faucibus non in mi. </h5>

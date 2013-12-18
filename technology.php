@@ -76,7 +76,7 @@
 <section class="bottom-action">
 	<div class="row">
     <div class="large-12 columns">
-      <h2 class="section-header">What this Means</h2>
+      <h2 class="section-header">Our Collaboration</h2>
       <h5 class="section-subheader">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eius, nemo, tempore omnis suscipit distinctio deleniti perspiciatis expedita ut voluptas maiores ex aperiam rem illo eveniet voluptate natus in ducimus asperiores!</h3>
     </div>
   </div>
