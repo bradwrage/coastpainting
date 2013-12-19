@@ -53,6 +53,9 @@
 							<li>Experience with in vivo electrophysiological recording (strongly desired)</li>
 					</ul>
 				</div>
+				<div class="centered-btn">
+						<a href="#" class="button radius centered-btn inquire">Inquire</a>
+					</div>
 			</li>
 			<li>
 				<div class="job-container">
@@ -89,6 +92,9 @@
 										<li>Experience in fast-paced, start-up environment with changing priorities and timelines</li>
 							</ul>
 				</div>
+					<div class="centered-btn">
+						<a href="#" class="button radius centered-btn inquire">Inquire</a>
+					</div>
 			</li>
 		</ul>
 	</div>
@@ -106,7 +112,7 @@
   </div>
 
   <div class="centered-btn">
-    <a href="#" class="button centered-btn">Contact Us</a>
+    <a href="#" class="button centered-btn radius">Contact Us</a>
   </div>
 </section>
 

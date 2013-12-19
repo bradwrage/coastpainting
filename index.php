@@ -26,17 +26,17 @@
   </div>
   <div class="row section-top">
     <div class="large-4 columns about-category">
-      <img class="light-bulb" src="assets/images/light-bulb.svg">
+      <img class="light-bulb" src="assets/images/light-bulb.png">
       <h3 class="about-item-title">Years of Research</h3>
       <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Labore, ducimus ipsa placeat autem aut deleniti quos sunt quae veniam. Asperiores, repellendus, quia autem ex nihil ad consequuntur ab numquam dolore.</p>
     </div>
      <div class="large-4 columns about-category">
-       <img class="partners" src="assets/images/partners.svg">
+       <img class="partners" src="assets/images/partners.png">
       <h3 class="about-item-title">Key Partners</h3>
       <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Labore, ducimus ipsa placeat autem aut deleniti quos sunt quae veniam. Asperiores, repellendus, quia autem ex nihil ad consequuntur ab numquam dolore.</p>
     </div>
      <div class="large-4 columns about-category">
-       <img class="heart" src="assets/images/heart.svg">
+       <img class="heart" src="assets/images/heart.png">
       <h3 class="about-item-title">Big Dreams</h3>
       <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Labore, ducimus ipsa placeat autem aut deleniti quos sunt quae veniam. Asperiores, repellendus, quia autem ex nihil ad consequuntur ab numquam dolore.</p>
     </div>
@@ -61,7 +61,7 @@
       <p class="main-content">Circuit Therapeutics is the industry leader in optogenetics and is pioneering new treatments through the use of this groundbreaking technology.  Optogenetics has gained rapid acceptance globally and is being used by hundreds of laboratories worldwide</p>
     </div>
   </div>
-  <div class="row content-row">
+  <div class="row content-row hide-for-small">
     <div class="large-6 columns">
       <h3>Incredible Findings</h3>
       <p class="main-content">Through region-specific injection of viral vectors containing cell-type specific promoters, opsins can be targeted with a high degree of specificity to particular neurons of interest. The opsin-activating light can be directed to specific locations in the brain, providing yet another region-specific targeting capacity of optogenetics.
@@ -70,6 +70,17 @@
     </div>
     <div class="large-6 columns research">
         <img class="" src="assets/images/science.jpg">
+    </div>
+  </div>
+
+   <div class="row content-row show-for-small">
+    <div class="large-6 columns research">
+        <img class="" src="assets/images/science.jpg">
+    </div>
+    <div class="large-6 columns research">
+      <h3>Incredible Findings</h3>
+      <p class="main-content">Through region-specific injection of viral vectors containing cell-type specific promoters, opsins can be targeted with a high degree of specificity to particular neurons of interest. The opsin-activating light can be directed to specific locations in the brain, providing yet another region-specific targeting capacity of optogenetics.
+      </p></p>
     </div>
   </div>
 </section>
@@ -83,7 +94,7 @@
   </div>
   <div class="row">
     <div class="large-12 columns">
-      <ul class="small-block-grid-3 alternate-grid">
+      <ul class="large-block-grid-3 alternate-grid">
       <li>
         <div class="person-container">
           <img class="advisor-pic" src="assets/images/advisors/karl.png">
@@ -151,7 +162,7 @@
       <h5 class="section-subheader ">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer ac elit id quam viverra faucibus non in mi. Fusce eu pellentesque mauris. Pellentesque quis accumsan nibh.</h3>
     </div>
   </div>
-  <div class="row row-margin">
+  <div class="row row-margin mobile-left">
     <div class="large-4 columns large-offset-2">
       <img class="logo-image" src="assets/images/logos/gigaom.png">
     </div>
@@ -161,7 +172,7 @@
     </div>
   </div>
 
-  <div class="row row-margin">
+  <div class="row row-margin mobile-left">
     <div class="large-4 columns large-offset-2">
      <img class="logo-image" src="assets/images/logos/techcrunch.png">
     </div>
@@ -171,7 +182,7 @@
     </div>
   </div>
 
-  <div class="row ">
+  <div class="row mobile-left">
     <div class="large-4 columns large-offset-2">
       <img class="logo-image" src="assets/images/logos/mashable.png">
     </div>

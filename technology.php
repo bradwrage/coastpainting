@@ -19,9 +19,9 @@
     </div>
   </div>
 	
-	<div class="row bottom-space">
+	<div class="row bottom-space hide-for-small">
 		<div class="large-6 columns left-text">
-			<h5>A neuromodulation technique to control and monitor the activities of individual neurons in living tissue.</h5>
+			<h5 class="intro-text">A neuromodulation technique to control and monitor the activities of individual neurons in living tissue.</h5>
 			<p>Through region-specific injection of viral vectors containing cell-type specific promoters, opsins can be targeted with a high degree of specificity to particular neurons of interest. The opsin-activating light can be directed to specific locations in the brain, providing yet another region-specific targeting capacity of optogenetics.
 			</p>
 			<a href="">Learn More</a>
@@ -30,12 +30,23 @@
 			 <img class="" src="assets/images/scientist.png">
 		</div>
 	</div>
+		<div class="row bottom-space show-for-small">
+		<div class="large-6 columns">
+			 <img class="" src="assets/images/scientist.png">
+		</div>
+			<div class="large-6 columns">
+			<h5 class="intro-text">A neuromodulation technique to control and monitor the activities of individual neurons in living tissue.</h5>
+			<p>Through region-specific injection of viral vectors containing cell-type specific promoters, opsins can be targeted with a high degree of specificity to particular neurons of interest. The opsin-activating light can be directed to specific locations in the brain, providing yet another region-specific targeting capacity of optogenetics.
+			</p>
+			<a href="">Learn More</a>
+		</div>
+	</div>
 	<div class="row bottom-space">
 		<div class="large-6 columns">
 			 <img class="" src="assets/images/science.jpg">
 		</div>
 		<div class="large-6 columns right-text">
-			<h5>Optogenetics provides the promise of new direct therapeutic treatments for patients who have no current options or with improved tolerability and greater quality of life.</h5>
+			<h5 class="intro-text">Optogenetics provides the promise of new direct therapeutic treatments for patients who have no current options or with improved tolerability and greater quality of life.</h5>
 			<p>Optogenetics offers the potential for entirely novel perspectives and mechanisms for drug discovery. The precision possible using optogenetic manipulation of specific neuronal circuits allows the discovery and development of a new generation of circuit-modulatory drugs.</p>
 			<a href="">Learn More</a>
 		</div>
@@ -51,9 +62,9 @@
     </div>
   </div>
 	
-	<div class="row bottom-space">
+	<div class="row bottom-space hide-for-small">
 		<div class="large-6 columns left-text">
-			<h5>Opsins are what make direct targeting of a cell possible for control. </h5>
+			<h5 class="intro-text">Opsins are what make direct targeting of a cell possible for control. </h5>
 			<p>In nature, opsins can be either excitatory, as in the case of channelrhodopsins (ChR) and other cationic channels, or inhibitory, as with chloride pumps like halorhodopsin (NpHR) providing for ground-breaking discoveries in precise intervention.</p>
 			<a href="">Learn More</a>
 		</div>
@@ -61,12 +72,22 @@
 			<img class="" src="assets/images/white-brain.jpg">
 		</div>
 	</div>
+		<div class="row bottom-space show-for-small">
+		<div class="large-6 columns">
+			<img class="" src="assets/images/white-brain.jpg">
+		</div>
+				<div class="large-6 columns">
+			<h5 class="intro-text">Opsins are what make direct targeting of a cell possible for control. </h5>
+			<p>In nature, opsins can be either excitatory, as in the case of channelrhodopsins (ChR) and other cationic channels, or inhibitory, as with chloride pumps like halorhodopsin (NpHR) providing for ground-breaking discoveries in precise intervention.</p>
+			<a href="">Learn More</a>
+		</div>
+	</div>
 	<div class="row bottom-space">
 		<div class="large-6 columns">
 			<img class="" src="assets/images/nerve-cell.jpg">
 		</div>
 		<div class="large-6 columns right-text">
-			<h5>Opsins are a group of light-sensitive membrane-bound G protein-coupled receptors of the retinylidene protein family found in photoreceptor cells of the retina.</h5>
+			<h5 class="intro-text">Opsins are a group of light-sensitive membrane-bound G protein-coupled receptors of the retinylidene protein family found in photoreceptor cells of the retina.</h5>
 			<p>In nature, opsins can be either excitatory, as in the case of channelrhodopsins (ChR) and other cationic channels, or inhibitory, as with chloride pumps like halorhodopsin (NpHR) and proton pumps. A growing toolbox is providing opsins with differing kinetics,  ionic conductances and activation wavelengths, further expanding potential utilities.</p>
 			<a href="">Learn More</a>
 		</div>

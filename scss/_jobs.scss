@@ -11,6 +11,7 @@
 .job-container {
 	background-color: #EEEEEE;
 	padding: 30px;
+	margin-bottom: 20px;
 	p {
 		font-size: 12px;
 	}
@@ -23,8 +24,17 @@
 		font-weight: 400;
 		padding-top: 15px;
 	}
+	@media only screen and (max-width: 700px) { 
+		height: 100%;
+	}
 }
 
 .job-bottom {
 	padding-bottom: 201px;
+}
+
+.inquire {
+	font-size: 14px;
+	padding: 15px 50px;
+	text-decoration: none !important;
 }

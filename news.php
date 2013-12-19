@@ -24,7 +24,7 @@
 			<img class="inc-logo" src="assets/images/inc.png">
 		</div>
 		<div class="large-8 columns content-right">
-			<h4>TechCrunch</h4>
+			<h4 class="publication-title">TechCrunch</h4>
 			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Omnis, vel, consequatur repellendus mollitia similique amet deleniti rerum reiciendis explicabo corporis nam officiis nisi minima sed natus deserunt voluptates autem fuga.</p>
 			<a href="">Read More</a>
 		</div>
@@ -35,7 +35,7 @@
 			<img class="tech-crunch" src="assets/images/tech-crunch.png">
 		</div>
 		<div class="large-8 columns content-right">
-			<h4>TechCrunch</h4>
+			<h4 class="publication-title">TechCrunch</h4>
 			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Omnis, vel, consequatur repellendus mollitia similique amet deleniti rerum reiciendis explicabo corporis nam officiis nisi minima sed natus deserunt voluptates autem fuga.</p>
 			<a href="">Read More</a>
 		</div>
@@ -46,7 +46,7 @@
 			<img class="gigaom" src="assets/images/gigaom.png">
 		</div>
 		<div class="large-8 columns content-right">
-			<h4>TechCrunch</h4>
+			<h4 class="publication-title">TechCrunch</h4>
 			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Omnis, vel, consequatur repellendus mollitia similique amet deleniti rerum reiciendis explicabo corporis nam officiis nisi minima sed natus deserunt voluptates autem fuga.</p>
 			<a href="">Read More</a>
 		</div>
@@ -64,7 +64,7 @@
   </div>
   <div class="row">
     <div class="large-12 columns">
-      <ul class="small-block-grid-3 alternate-grid">
+      <ul class="large-block-grid-3 alternate-grid">
       <li>
         <div class="person-container">
           <img class="advisor-pic paper" src="assets/images/paper.png">
@@ -76,7 +76,7 @@
       </li>
       <li> 
         <div class="person-container">
-            <img class="advisor-pic paper" src="assets/images/paper.png">
+              <img class="advisor-pic paper" src="assets/images/paper.png">
             <div class="right-about">
              <h5 class="name">Title</h5>
             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
@@ -134,7 +134,7 @@
   </div>
 
   <div class="centered-btn">
-    <a href="#" class="button centered-btn">Contact Us</a>
+    <a href="#" class="button centered-btn radius">Contact Us</a>
   </div>
 </section>
 

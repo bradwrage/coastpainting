@@ -19,18 +19,21 @@
 
 	<div class="row contact-row">
 		<div class="large-6 columns">
-			<h4>Location Information</h4>
+			<h4 class="location-info-header">Location Information</h4>
 			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minus, provident, tenetur, </p>
-			<img class="phone-svg" src="assets/images/phone.svg">
-			<img class="address-svg" src="assets/images/address.svg">
+			<img class="phone-svg" src="assets/images/phone.png">
+			<img class="address-svg" src="assets/images/address.png">
 			<div class="phone-info">
 				<span class="phone">Phone: 1.253.365 <br />Fax: 408.172.1523</span>
-				<span class="address">Address: 1.253.365</span>
+				<span class="address">Circuit Therapeutics, Inc.<br/>
+				1505 O’Brien Drive<br />
+				Menlo Park, CA 94025
+				</span>
 				<img class="map-picture" src="assets/images/map.png">
 			</div>
 		</div>
 		<div class="large-6 columns">
-			<h4>Send Us a Note</h4>
+			<h4 class="send-note">Send Us a Note</h4>
 			<form>
 				<div class="row">
 					<div class="large-12 columns">
@@ -53,7 +56,9 @@
 					</div>
 				</div>
 			</form>
-			<a href="#" class="button submit-btn">Submit</a>
+			<div>
+				<a href="#" class="button submit-btn">Submit</a>
+			</div>
 		</div>
 	</div>
 

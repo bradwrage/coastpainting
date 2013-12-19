@@ -1,13 +1,20 @@
-.top-nav {
+.top-nav, .tab-bar {
 	z-index: 99999;
 	background-color: white;
 	height: 60px;
 		.logo {
 		height: 40px;
-		margin-top: 8px;
+		// margin-top: 8px;
 	}
 }
 
+
+.left-off-canvas-toggle.menu-icon {
+	span {
+		left: 30%;
+		top: 20%;
+	}
+}
 .top-nav2 {
 	z-index: 99999;
 	background-color: white;
@@ -39,7 +46,15 @@
 			}
 		}
 	}
-
+&.footer {
+	float: left !important;
+	a{
+		color: white;
+	}
+}
+@media only screen and (max-width: 700px) { 
+	display: block !important;
+}
 }
 
 @media only screen and (max-width: 700px) { 

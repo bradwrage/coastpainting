@@ -89,13 +89,13 @@
   </div>
   <div class="row">
     <div class="large-12 columns">
-      <ul class="small-block-grid-3 alternate-grid">
+      <ul class="large-block-grid-2 alternate-grid-large">
       <li>
         <div class="person-container">
           <img class="advisor-pic" src="assets/images/advisors/karl.png">
             <div class="right-about">
              <h5 class="name">Karl Deisseroth, <span>MD, PhD</span></h5>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+            <p>Dr. Deisseroth is the D.H. Chen Professor of Bioengineering and of Psychiatry and Behavioral Sciences at Stanford University. His pioneering work has been at the foundation of the field of optogenetics, opening up new ways to understand neural circuit function and dysfunction in neurological and psychiatric disease. He is a Howard Hughes Medical Institute Investigator, a member of the National Academy of Sciences, and has received prestigious awards, including the Nakasone Prize. Dr. Deisseroth received his PhD and MD from Stanford University. He is a Co-Founder of Circuit Therapeutics.</p>
           </div>
         </div>
       </li>
@@ -104,7 +104,7 @@
          <img class="advisor-pic" src="assets/images/advisors/scott.png">
             <div class="right-about">
             <h5 class="name">Scott Delp, <span>PhD</span></h5>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+            <p>Dr. Delp is the James H. Clark Professor at Stanford University in the Departments of Bioengineering, Mechanical Engineering, and, by courtesy, Orthopedic Surgery. He is Founding Chair of the Department of Bioengineering and Co-Director of the Center for Biomedical Computation at Stanford University.  Dr. Delp’s work draws on computational mechanics, medical imaging, and neuromuscular biology to improve treatments for neurologic and musculoskeletal diseases. His highly realistic simulations of the musculoskeletal system have been used to study neural control of movement and mechanisms of musculoskeletal diseases and to design surgeries and medical devices.  He received his PhD from Stanford University in Mechanical Engineering. Dr. Delp is a Co-Founder of Circuit Therapeutics.</p>
           </div>
         </div>
       </li>
@@ -113,7 +113,7 @@
         <img class="advisor-pic" src="assets/images/advisors/anatol.png">
             <div class="right-about">
             <h5 class="name">Anatol Kreitzer, <span>PhD</span></h5>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+            <p>Dr. Kreitzer is Associate Professor of Physiology and Neurology at University of California, San Francisco and Associate Investigator at the Gladstone Institute.  His research focuses on understanding the function of the basal ganglia, particularly in the context of disorders including Parkinson’s Disease. He has published in high profile journals and was honored with the Young Investigator Award from the Society of Neuroscience. Dr. Kreitzer earned his PhD at Harvard University and conducted postdoctoral research at Stanford University.</p>
           </div>
         </div>
       </li>
@@ -123,7 +123,7 @@
           <img class="advisor-pic" src="assets/images/advisors/rob.png">
             <div class="right-about">
             <h5 class="name">Rob Malenka, <span>MD, PhD</span></h5>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+            <p>Dr. Malenka is the Nancy Friend Pritzker Professor in Psychiatry & Behavioral Sciences at Stanford University and is Deputy Director of the Stanford Neurosciences Institute.  He was the former co-Director at the Stanford Institute for Neuro-Innovation and Translational Neurosciences at the Stanford University School of Medicine and Associate Chair of the Department of Psychiatry and Behavioral Sciences.  Dr. Malenka has been elected as a Member of the National Academy of Sciences, amongst other prestigious honors. His work focuses on understanding molecular mechanisms of synaptic plasticity and synaptic mechanisms underlying addiction and psychiatric disorders. He received his PhD and MD from Stanford University School of Medicine. Dr Malenka is a Co-Founder of Circuit Therapeutics.</p>
           </div>
         </div>
       </li>
@@ -132,7 +132,7 @@
            <img class="advisor-pic" src="assets/images/advisors/thomas.png">
             <div class="right-about">
             <h5 class="name">Thomas Südhof, <span>MD</span></h5>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+            <p>Dr. Südhof is a renowned scientist, winner of the Nobel Prize in Physiology or Medicine 2013, for his fundamental work understanding neuronal communication. Dr. Südhof is the Avram Goldstein Professor in the Stanford University School of Medicine and Professor, by courtesy, of Neurology and of Psychiatry and Behavioral Sciences; he is also a Howard Hughes Medical Institute investigator.  He was formerly at the University of Texas Southwestern Medical Center at Dallas, earned his MD from Georg-August-Universität in Göttingen and performed postdoctoral studies at the Max Planck Institute for Biophysical Chemistry. He has received numerous honors including the Nobel Prize (2013), the Lasker Award (2013), and the Kavli Prize (2010), and he is a Member of the National Academy of Sciences. Dr. Südhof is a Co-Founder of Circuit Therapeutics.</p>
           </div>
         </div>
       </li>
@@ -150,7 +150,7 @@
   </div>
 
   <div class="centered-btn">
-    <a href="#" class="button centered-btn">Contact Us</a>
+    <a href="#" class="button centered-btn radius">Contact Us</a>
   </div>
 </section>
 
