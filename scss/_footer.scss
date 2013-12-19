@@ -1,20 +1,18 @@
 footer {
 height: 60px;
 background-color: #05568B;
-
 @media only screen and (max-width: 700px) { 
-
+	padding-top: 10px;
 	li {
 		a {
 			padding: 0px 8px !important;
 		}
 	}
-	margin-bottom: 12px !important;
 }
 .copyright {
 	font-size: 12px;
 	padding-top: 25px;
-	color: white;
+	color: #d2d2d2;
 	font-weight: 400;
 	float: right;
 	span {
@@ -23,6 +21,7 @@ background-color: #05568B;
 		@media only screen and (max-width: 700px) { 
 		padding-bottom: 20px;
 		float: center;
+		padding-left: 0px;
 		}
 	}
 	-webkit-font-smoothing: antialiased;
@@ -30,7 +29,6 @@ background-color: #05568B;
 		padding-bottom: 20px !important;
 		float: center;
 		text-align: center;
-		height: 100%;
 		
 	}
 }

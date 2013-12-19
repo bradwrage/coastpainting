@@ -1,4 +1,5 @@
 <!doctype html>
+<!--[if IE 9]> <html class="lt-ie10" lang="en"> <![endif]-->
 <html class="no-js" lang="en">
   <head>
     <meta charset="utf-8" />
@@ -6,6 +7,7 @@
     <title>Circuit TX</title>
     <link rel="stylesheet" href="stylesheets/app.css" />
     <script src="bower_components/modernizr/modernizr.js"></script>
+
   </head>
 
   <body>
@@ -16,21 +18,21 @@
       <section class="left-small show-for-small">
         <a class="left-off-canvas-toggle menu-icon show" ><span></span></a>
       </section>
-     <section class="middle tab-bar-section show-for-small">
+      <section class="middle tab-bar-section show-for-small">
         <a href="index2.php"><img class="logo" src="assets/images/circuit-logo.png"></a>
       </section>
-        <div class="row">
-    <div class="large-12 columns hide-for-small">
-      <a href="index2.php"><img class="logo" src="assets/images/circuit-logo.png"></a>
-      <ul class="nav">
-        <li><a href="technology.php">Technology</a></li>
-         <li><a href="about.php">About</a></li>
-        <li><a href="news.php">News</a></li>
-        <li><a href="jobs.php">Jobs</a></li>
-        <li><a href="contact.php">Contact</a></li>
-      </ul>
-    </div>
-  </div>
+      <div class="row">
+        <div class="large-12 columns hide-for-small">
+          <a href="index2.php"><img class="logo" src="assets/images/circuit-logo.png"></a>
+          <ul class="nav">
+            <li><a href="technology.php">Technology</a></li>
+             <li><a href="about.php">About</a></li>
+            <li><a href="news.php">News</a></li>
+            <li><a href="jobs.php">Jobs</a></li>
+            <li><a href="contact.php">Contact</a></li>
+          </ul>
+        </div>
+      </div>
     </nav>
     <aside class="left-off-canvas-menu">
       <ul class="off-canvas-list">
