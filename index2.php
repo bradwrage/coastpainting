@@ -17,20 +17,20 @@
         </div>
       </div>
     </div>
-
-<section class="background-photo">
-  <div class="row">
-    <div class="large-12 columns">
-      <h1 class="hero-title">Circuit Therapeutics</h1>
-      <h2 class="header-subtitle">The industry leader in optogenetics developing breakthrough therapeutic interventions transforming the field of drug discovery</h2>
+  <section class="background-photo">
+    <div class="row">
+      <div class="large-12 columns">
+        <h1 class="hero-title">Circuit Therapeutics</h1>
+        <h2 class="header-subtitle">The industry leader in optogenetics developing breakthrough therapeutic interventions transforming the field of drug discovery</h2>
+      </div>
+      <div class="centered-btn">
+         <a href="technology.php" class="button">Learn More</a>
+      </div>
     </div>
-  <div class="centered-btn">
-     <a href="technology.php" class="custom-btn">Learn More</a>
+    </section>
+ 
   </div>
-  </div>
-  </section>
-  </div>
-      <div class="push"></div>
+       <div class="push"></div>
   <?php include("includes/_footer2.php"); ?>
 
 

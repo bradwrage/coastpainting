@@ -17,6 +17,9 @@
 	}
 	.left-text {
 		padding-right: 80px;
+		@media only screen and (max-width: 700px) { 
+			padding-right: 10px;
+		}
 	}
 	.right-text {
 		padding-left: 80px;
@@ -32,7 +35,7 @@
 		}
 		p {
 			padding-left: 5px;
-			padding-right: 15px;
+			padding-right: 10px;
 		}
 		a {
 			padding-left: 5px;
@@ -53,3 +56,9 @@
 	}
 }
 
+.nerve-cell {
+	max-width: 390px;
+}
+.brain {
+	max-width: 350px;
+}

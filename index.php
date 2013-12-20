@@ -10,7 +10,7 @@
       <h2 class="header-subtitle">The industry leader in optogenetics developing breakthrough therapeutic interventions transforming the field of drug discovery</h2>
     </div>
   <div class="centered-btn">
-    <a href="#" class="custom-btn">Learn More</a>
+    <a href="technology.php" class="button radius">Learn More</a>
   </div>
   </div>
 </section>
@@ -28,17 +28,17 @@
     <div class="large-4 columns about-category">
       <img class="light-bulb" src="assets/images/light-bulb.png">
       <h3 class="about-item-title">Years of Research</h3>
-      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Labore, ducimus ipsa placeat autem aut deleniti quos sunt quae veniam. Asperiores, repellendus, quia autem ex nihil ad consequuntur ab numquam dolore.</p>
+      <p>With years of experience and research under our belt, we've come across some incredible findings. </p>
     </div>
      <div class="large-4 columns about-category">
        <img class="partners" src="assets/images/partners.png">
       <h3 class="about-item-title">Key Partners</h3>
-      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Labore, ducimus ipsa placeat autem aut deleniti quos sunt quae veniam. Asperiores, repellendus, quia autem ex nihil ad consequuntur ab numquam dolore.</p>
+      <p>Much of our success is directly a result of our team and key partners that have poured their time and energy into our dream.</p>
     </div>
      <div class="large-4 columns about-category">
        <img class="heart" src="assets/images/heart.png">
       <h3 class="about-item-title">Big Dreams</h3>
-      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Labore, ducimus ipsa placeat autem aut deleniti quos sunt quae veniam. Asperiores, repellendus, quia autem ex nihil ad consequuntur ab numquam dolore.</p>
+      <p>Our goal is much greater than becoming a succesful company, but to see lives touched and changed forever.</p>
     </div>
   </div>
 </section>
@@ -54,7 +54,7 @@
 
   <div class="row content-row">
     <div class="large-6 columns">
-    <img class="" src="assets/images/scientist.png">
+    <img class="" src="assets/images/scientist.jpg">
     </div>
     <div class="large-6 columns research">
       <h3>Optogenetics</h3>
@@ -69,13 +69,13 @@
 
     </div>
     <div class="large-6 columns research">
-        <img class="" src="assets/images/science.jpg">
+        <img class="" src="assets/images/research.jpg">
     </div>
   </div>
 
    <div class="row content-row show-for-small">
     <div class="large-6 columns research">
-        <img class="" src="assets/images/science.jpg">
+        <img class="research-pic" src="assets/images/research.jpg">
     </div>
     <div class="large-6 columns research">
       <h3>Incredible Findings</h3>
@@ -85,11 +85,11 @@
   </div>
 </section>
 
-<section class="the-team advisors">
+<section class="the-team team">
   <div class="row">
     <div class="large-12 columns">
       <h2 class="section-header">The Team</h2>
-      <h5 class="section-subheader">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Culpa, vel, vero, necessitatibus aliquam porro excepturi sapiente hic placeat neque libero ut dolore commodi quibusdam eligendi alias sit ipsum in laudantium!</h3>
+      <h5 class="section-subheader">Behind the expertise and our each and every member, is a desire to make a difference way beyond what anyone has thought possible. This ambition is what drives the team and makes going to work everyday incredibly exciting. </h3>
     </div>
   </div>
   <div class="row">
@@ -97,60 +97,65 @@
       <ul class="large-block-grid-3 alternate-grid">
       <li>
         <div class="person-container">
-          <img class="advisor-pic" src="assets/images/advisors/karl.png">
+          <img class="advisor-pic" src="assets/images/team/fred-moll-small.png">
             <div class="right-about">
-             <h5 class="name">Karl Deisseroth, <span>MD, PhD</span></h5>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+             <h5 class="name">Fred Moll, <span>MD, PhD</span></h5>
+            <p>CEO and Chairman of the Board</p>
           </div>
         </div>
       </li>
       <li> 
         <div class="person-container">
-         <img class="advisor-pic" src="assets/images/advisors/scott.png">
+         <img class="advisor-pic" src="assets/images/team/karoly-small.png">
             <div class="right-about">
-            <h5 class="name">Scott Delp, <span>PhD</span></h5>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+            <h5 class="name">Karoly Nikolich, <span>PhD</span></h5>
+            <p>Founder of Circuit Therapeutics </p>
+
           </div>
         </div>
       </li>
       <li>
          <div class="person-container">
-        <img class="advisor-pic" src="assets/images/advisors/anatol.png">
+        <img class="advisor-pic" src="assets/images/team/mike-small.png">
             <div class="right-about">
-            <h5 class="name">Anatol Kreitzer, <span>PhD</span></h5>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+            <h5 class="name">Michael Kaplitt, <span>MD,PhD</span></h5>
+            <p>Chief Scientific Officer and Sr. Vice President</p>
           </div>
         </div>
       </li>
 
            <li>
         <div class="person-container">
-          <img class="advisor-pic" src="assets/images/advisors/rob.png">
+          <img class="advisor-pic" src="assets/images/team/steven-small.png">
             <div class="right-about">
-            <h5 class="name">Rob Malenka, <span>MD, PhD</span></h5>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+            <h5 class="name">Stephen Braithwaite, <span>PhD</span></h5>
+            <p>Sr. Vice President Research</p>
           </div>
         </div>
       </li>
-           <li>
+        <li>
         <div class="person-container">
-           <img class="advisor-pic" src="assets/images/advisors/thomas.png">
+           <img class="advisor-pic" src="assets/images/team/new-member.png">
             <div class="right-about">
-            <h5 class="name">Thomas Südhof, <span>MD</span></h5>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+            <h5 class="name">Dan Andersen <span></span></h5>
+            <p>Vice President Engineering</p>
           </div>
         </div>
       </li>
           <li>
-        <div class="person-container">
-           <img class="advisor-pic" src="assets/images/advisors/thomas.png">
+        <a class="new-job"href="jobs.php"><div class="person-container">
+           <img class="advisor-pic" src="assets/images/team/new-member.png">
             <div class="right-about">
-            <h5 class="name">Thomas Südhof, <span>MD</span></h5>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+            <h5 class="name">You <span></span></h5>
+            <p>Join us to become the next member of the team.</p>
           </div>
         </div>
+        </a>
       </li>
       </ul>
+      <div class="centered-btn see-the-team">
+    <a href="about.php" class="button centered-btn radius">Learn More</a>
+  </div>
     </div>
   </div>
 </section>
@@ -159,39 +164,22 @@
   <div class="row">
     <div class="large-12 columns">
       <h2 class="section-header blue">The Press</h2>
-      <h5 class="section-subheader ">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer ac elit id quam viverra faucibus non in mi. Fusce eu pellentesque mauris. Pellentesque quis accumsan nibh.</h3>
+      <h5 class="section-subheader ">Circuit Therapeutics and Boehringer Ingelheim announce signature of a research partnership agreement to discover new approaches to treating psychiatric disorders.</h3>
     </div>
   </div>
   <div class="row row-margin mobile-left">
-    <div class="large-4 columns large-offset-2">
-      <img class="logo-image" src="assets/images/logos/gigaom.png">
+    <div class="large-4 columns large-offset-2 news-snippet">
+      <img class="" src="assets/images/logos/collaboration.png">
     </div>
     <div class="large-6 columns">
-      <h5 class="quoted-text ">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer ac elit id quam viverra faucibus non in mi. </h5>
-      <p class="source">John Smith, Merc Industries</p>
+      <h5 >Boehringer Ingelheim and Circuit Therapeutics have entered into a research collaboration agreement for the discovery of new ways of treating psychiatric disorders. </h5>
+      <p class="source">MENLO PARK, California and INGELHEIM, Germany, December 18th, 2013</p>
     </div>
   </div>
-
-  <div class="row row-margin mobile-left">
-    <div class="large-4 columns large-offset-2">
-     <img class="logo-image" src="assets/images/logos/techcrunch.png">
-    </div>
-    <div class="large-6 columns">
-      <h5 class="quoted-text ">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer ac elit id quam viverra faucibus non in mi. </h5>
-      <p class="source">John Smith, Merc Industries</p>
-    </div>
+  <div class="centered-btn">
+    <a href="news.php" class="button centered-btn radius">Learn More</a>
   </div>
-
-  <div class="row mobile-left">
-    <div class="large-4 columns large-offset-2">
-      <img class="logo-image" src="assets/images/logos/mashable.png">
-    </div>
-    <div class="large-6 columns">
-      <h5 class="quoted-text ">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer ac elit id quam viverra faucibus non in mi. </h5>
-      <p class="source">John Smith, Merc Industries</p>
-    </div>
-  </div>
-
+</section>
 </section>
 
 

@@ -10,17 +10,11 @@
 </section>
 
 <section class="main-section">
-	<div class="row">
-	  <div class="large-12 columns">
-	    <h2 class="section-header">Partner with Us</h2>
-	    <h5 class="section-subheader">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eius, nemo, tempore omnis suscipit distinctio deleniti perspiciatis expedita ut voluptas maiores ex aperiam rem illo eveniet voluptate natus in ducimus asperiores!</h3>
-	  </div>
-	</div>
 
 	<div class="row contact-row">
 		<div class="large-6 columns">
 			<h4 class="location-info-header">Location Information</h4>
-			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minus, provident, tenetur, </p>
+			<p>Give us a call or send as a fax at the following. Our offices can be found at the following address for directions or mailing.</p>
 			<img class="phone-svg" src="assets/images/phone.png">
 			<img class="address-svg" src="assets/images/address.png">
 			<div class="phone-info">

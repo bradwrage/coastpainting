@@ -33,7 +33,6 @@ html, body {
 
 }
 
-
 #wrapper {
 	min-height: 100%;
   height: auto !important;
@@ -46,6 +45,22 @@ html, body {
 	height: 60px;
 }
 
+// #footer, .push {
+// clear: both;
+// }
+
+#footer {
+	height: 60px;
+	background-color: white;
+.copyright {
+	font-size: 12px;
+	padding-top: 25px;
+	color: white;
+	font-weight: 300;
+	float: left;
+	
+}
+}
 
 .background-photo {
 	margin-bottom: 0px !important;

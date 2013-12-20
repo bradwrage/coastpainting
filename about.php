@@ -16,12 +16,12 @@
 	<div class="row">
     <div class="large-12 columns">
       <h2 class="section-header">Collaborations</h2>
-      <h5 class="section-subheader">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eius, nemo, tempore omnis suscipit distinctio deleniti perspiciatis expedita ut voluptas maiores ex aperiam rem illo eveniet voluptate natus in ducimus asperiores!</h3>
+      <h5 class="section-subheader">Circuit Therapeutics and Boehringer Ingelheim announce signature of a research partnership agreement to discover new approaches to treating psychiatric disorders.</h3>
     </div>
   </div>
 
   <div class="centered-btn">
-    <a href="#" class="button radius centered-btn">Learn More</a>
+    <a href="news.php" class="button radius centered-btn">Learn More</a>
   </div>
 </section>
 
@@ -65,7 +65,7 @@
           <p>Dr. Braithwaite joined Circuit Therapeutics in 2012. He previously led drug discovery at Signum Biosciences, headed the cellular neurodegeneration group at Wyeth Research/Pfizer, and was a program leader at AGY Therapeutics. Dr Braithwaite received his PhD from the University of Bristol, UK and performed postdoctoral work at Stanford University, he has published extensively in the fields of basic neuroscience research, Alzheimer’s and Parkinson’s disease. He is involved with the Michael J Fox Foundation for Parkinson’s Disease Research and the Alzheimer’s Drug Discovery Foundation as well as reviewing grants and publications from multiple organizations.</p>
         </div>
       </li>
-      <li><img class="team-pic" src="assets/images/team/bill1.png">
+      <li><img class="team-pic" src="assets/images/team/dan.png">
        <div class="person-about"> 
          <h5 class="name">Dan Andersen</h5>
           <p>Dan Andersen joined Circuit Therapeutics in 2012. He was previously Co-Founder and Director of Research of OptiMedica Corporation, Manager of Advanced Studies at Lumenis Ltd., and Co-Founder of Sciton, Inc.  Dan, an expert in light-tissue interaction and device development, received his BS in Physics from the University of Arizona, Tucson.
@@ -145,7 +145,7 @@
   <div class="row">
     <div class="large-12 columns">
       <h2 class="section-header">Get in Touch</h2>
-      <h5 class="section-subheader">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eius, nemo, tempore omnis suscipit distinctio deleniti perspiciatis expedita ut voluptas maiores ex aperiam rem illo eveniet voluptate natus in ducimus asperiores!</h3>
+      <h5 class="section-subheader">Have questions or simply looking to find out more about partnering with us? Pick up the phone or send a quick message to find out more about our vision or partnering with us.</h3>
     </div>
   </div>
 
