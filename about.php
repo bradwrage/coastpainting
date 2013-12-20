@@ -84,7 +84,7 @@
   <div class="row">
     <div class="large-12 columns">
       <h2 class="section-header">Scientific Advisors</h2>
-      <h5 class="section-subheader">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Culpa, vel, vero, necessitatibus aliquam porro excepturi sapiente hic placeat neque libero ut dolore commodi quibusdam eligendi alias sit ipsum in laudantium!</h3>
+      <h5 class="section-subheader">A great team, means great advisors and we have the best with incredible experience, passion, and support from the world's smartest people. </h3>
     </div>
   </div>
   <div class="row">
@@ -150,7 +150,7 @@
   </div>
 
   <div class="centered-btn">
-    <a href="#" class="button centered-btn radius">Contact Us</a>
+    <a href="contact.php" class="button centered-btn radius">Contact Us</a>
   </div>
 </section>
 

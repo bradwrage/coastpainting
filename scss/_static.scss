@@ -7,14 +7,29 @@ html, body {
 	text-align: center;
 }
 
+.footer-background {
+	height: 60px;
+	background-color: white;
+	position: relative;
+	z-index: 99999;
+	.copyright {
+		font-size: 12px;
+		padding-top: 25px;
+		color: white;
+		font-weight: 300;
+		float: left;
+	}
+}
 
-.nav2 {
+.footer-nav {
 	list-style: none;
 	margin: 0;
 	padding: 0;
 	text-align: center;
 	float: center;
 	padding-top: 11px;
+	background-color: white;
+	z-index: 99999;
 	li {
 		display: inline;
 		text-transform: uppercase;
@@ -30,36 +45,29 @@ html, body {
 			}
 		}
 	}
-
 }
+
+.top-nav2 {
+	z-index: 99999;
+	background-color: white;
+	height: 80px;
+		.logo {
+		height: 40px;
+		margin-top: 18px;
+	}
+}
+
 
 #wrapper {
 	min-height: 100%;
   height: auto !important;
   height: 100%;
   margin: 0 auto -60px;
+  position: relative;
 }
-
 
 .push {
 	height: 60px;
-}
-
-// #footer, .push {
-// clear: both;
-// }
-
-#footer {
-	height: 60px;
-	background-color: white;
-.copyright {
-	font-size: 12px;
-	padding-top: 25px;
-	color: white;
-	font-weight: 300;
-	float: left;
-	
-}
 }
 
 .background-photo {
@@ -68,7 +76,7 @@ html, body {
 	.hero-title {
 		color: white;
 		text-align: center;
-		padding-top: 160px;
+		
 		 -webkit-font-smoothing: antialiased;
 	}
 	.header-subtitle {
@@ -78,11 +86,30 @@ html, body {
 		margin-bottom: 20px;
 		 -webkit-font-smoothing: antialiased;
 	}
-}
-
-
 	@media only screen and (max-width: 700px) { 
 		.hero-title {
 		padding-top: 80px;
 		}
 	} 
+}
+
+
+.absolutecentercontent .Absolute-Center.is-Variable {
+  display: table;
+  height: auto;
+}
+
+.Absolute-Center { 
+  height: 50%; /* Set your own height: percents, ems, whatever! */
+  width: 100%; /* Set your own width: percents, ems, whatever! */
+  overflow: auto; /* Recommended in case content is larger than the container */
+  margin: auto; /* Center the item vertically & horizontally */
+  position: absolute; /* Break it out of the regular flow */
+  top: 0; left: 0; bottom: 0; right: 0; /* Set the bounds in which to center it, relative to its parent/container */
+}
+
+.Center-Container {
+	position: relative;
+}
+
+	

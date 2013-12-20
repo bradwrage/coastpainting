@@ -1,7 +1,7 @@
-<div id="footer">
+<div class="footer-background">
 	<div class="row">
 		<div class="large-12 columns">
-			        <ul class="nav2">
+			        <ul class="footer-nav">
             <li><a href="index.php">Home</a></li>
             <li><a href="about.php">About</a></li>
             <li><a href="technology.php">Technology</a></li>

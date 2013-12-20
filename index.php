@@ -10,7 +10,7 @@
       <h2 class="header-subtitle">The industry leader in optogenetics developing breakthrough therapeutic interventions transforming the field of drug discovery</h2>
     </div>
   <div class="centered-btn">
-    <a href="technology.php" class="button radius">Learn More</a>
+    <a href="technology.php" class="secondary button radius alternate">Learn More</a>
   </div>
   </div>
 </section>

@@ -54,7 +54,7 @@
 					</ul>
 				</div>
 				<div class="centered-btn">
-						<a href="#" class="button radius centered-btn inquire">Inquire</a>
+						<a href="mailto:info@circuittx.com" class="button radius centered-btn inquire">Inquire</a>
 					</div>
 			</li>
 			<li>
@@ -93,7 +93,7 @@
 							</ul>
 				</div>
 					<div class="centered-btn">
-						<a href="#" class="button radius centered-btn inquire">Inquire</a>
+						<a href="mailto:info@circuittx.com" class="button radius centered-btn inquire">Inquire</a>
 					</div>
 			</li>
 		</ul>
