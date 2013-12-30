@@ -9,7 +9,7 @@
       <h1 class="hero-title">Coast Painting</h1>
       <h2 class="header-subtitle">The industry leader in optogenetics developing breakthrough therapeutic interventions transforming the field of drug discovery</h2>
     </div>
-  <!--  -->
+
   </div>
 </section>
 
