@@ -1,6 +1,7 @@
 
 html, body {
 	height: 100%;
+	
 }
 
 .centered {
@@ -55,6 +56,12 @@ html, body {
 		height: 40px;
 		margin-top: 18px;
 	}
+	@media only screen and (max-width: 700px) { 
+		height: 60px;
+		.logo {
+			margin-top: 10px;
+		}
+	}
 }
 
 
@@ -64,6 +71,9 @@ html, body {
   height: 100%;
   margin: 0 auto -60px;
   position: relative;
+  @media only screen and (max-width: 700px) { 
+	margin: 0 auto;
+  }
 }
 
 .push {
@@ -89,6 +99,9 @@ html, body {
 	@media only screen and (max-width: 700px) { 
 		.hero-title {
 		padding-top: 80px;
+		}
+		.header-subtitle {
+			font-size: 16px;
 		}
 	} 
 }

@@ -9,14 +9,16 @@
   </head>
 
 <body>
+
   <div id="wrapper">
     <div class="top-nav2">
       <div class="row">
         <div class="large-12 columns centered">
-          <a href="index.php"><img class="logo" src="assets/images/circuit-logo.svg"></a>
+          <a href="index.php"><img class="logo" src="assets/images/circuit-logo.png"></a>
         </div>
       </div>
     </div>
+    
     <section class="background-photo">
       <div class="row Absolute-Center is-Variable">
         <div class="large-12 columns">

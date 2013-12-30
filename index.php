@@ -6,12 +6,10 @@
 <section class="wrapper-container">
   <div class="row">
     <div class="large-12 columns">
-      <h1 class="hero-title">Circuit Therapeutics</h1>
+      <h1 class="hero-title">Coast Painting</h1>
       <h2 class="header-subtitle">The industry leader in optogenetics developing breakthrough therapeutic interventions transforming the field of drug discovery</h2>
     </div>
-  <div class="centered-btn">
-    <a href="technology.php" class="secondary button radius alternate">Learn More</a>
-  </div>
+  <!--  -->
   </div>
 </section>
 
