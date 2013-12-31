@@ -19,29 +19,23 @@
         <a class="left-off-canvas-toggle menu-icon show" ><span></span></a>
       </section>
       <section class="middle tab-bar-section show-for-small">
-        <a href="index.php"><img class="logo" src="assets/images/circuit-logo.png"></a>
+        <a href="index.php"><img class="logo" src="assets/images/coast-logo.png"></a>
       </section>
       <div class="row">
         <div class="large-12 columns hide-for-small">
           <a href="index.php"><img class="logo" src="assets/images/coast-logo.png"></a>
           <ul class="nav">
-            <li><a href="technology.php">Technology</a></li>
-             <li><a href="about.php">About</a></li>
-            <li><a href="news.php">News</a></li>
-            <li><a href="jobs.php">Jobs</a></li>
-            <li><a href="contact.php">Contact</a></li>
+            <li><a href="technology.php">About</a></li>
+             <li><a href="contact.php">Contact Us</a></li>
           </ul>
         </div>
       </div>
     </nav>
     <aside class="left-off-canvas-menu">
       <ul class="off-canvas-list">
-        <li><label>Circuit TX</label></li>
+        <li><label>Coast Painting Inc.</label></li>
         <li><a href="index.php">Home</a></li>
-        <li><a href="technology.php">Technology</a></li>
         <li><a href="about.php">About</a></li>
-        <li><a href="news.php">News</a></li>
-        <li><a href="jobs.php">Jobs</a></li>
         <li><a href="contact.php">Contact</a></li>
       </ul>
     </aside>

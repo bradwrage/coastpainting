@@ -6,37 +6,43 @@
 <section class="wrapper-container">
   <div class="row">
     <div class="large-12 columns">
-      <h1 class="hero-title">Coast Painting</h1>
-      <h2 class="header-subtitle">The industry leader in optogenetics developing breakthrough therapeutic interventions transforming the field of drug discovery</h2>
+      <h1 class="hero-title">Professional and Certified Painting Experts</h1>
+      <h2 class="header-subtitle"></h2>
     </div>
-  <!--  -->
   </div>
 </section>
 
-<!-- About Circuit TH -->
-
-<section class="about-circuit">
+<div class="logos-container">
   <div class="row">
     <div class="large-12 columns">
-      <h2 class="section-header">Leader in Optogenics</h2>
-      <h5 class="section-subheader">We are incredibly exciting to see what technology has allowed us to do. With optogenics we have explored and found amazing possibilities.</h3>
+       <img class="partners" src="assets/images/logos.png">
+     </div>
+  </div>
+</div>
+<!-- About Circuit TH -->
+
+<section class="about-coast">
+  <div class="row">
+    <div class="large-12 columns">
+      <h2 class="section-header white">Years of Experience</h2>
+      <h5 class="section-subheader white">With over 30 years of experience in residential, commercial, and industrial painting, we have what it takes to bring an exceptional product and service.</h3>
     </div>
   </div>
   <div class="row section-top">
     <div class="large-4 columns about-category">
-      <img class="light-bulb" src="assets/images/light-bulb.png">
-      <h3 class="about-item-title">Years of Research</h3>
-      <p>With years of experience and research under our belt, we've come across some incredible findings. </p>
+      <img class="light-bulb" src="assets/images/home-icon.png">
+      <h3 class="about-item-title white">Residential</h3>
+      <p class="white">From new track homes to historical landmarks we’ll pust a fresh new coat of paint on your home.</p>
     </div>
      <div class="large-4 columns about-category">
-       <img class="partners" src="assets/images/partners.png">
-      <h3 class="about-item-title">Key Partners</h3>
-      <p>Much of our success is directly a result of our team and key partners that have poured their time and energy into our dream.</p>
+       <img class="partners" src="assets/images/commercial-icon.png">
+      <h3 class="about-item-title white">Commercial</h3>
+      <p class="white">Thorough service for your business or establishment with all procedures up to code.</p>
     </div>
      <div class="large-4 columns about-category">
-       <img class="heart" src="assets/images/heart.png">
-      <h3 class="about-item-title">Big Dreams</h3>
-      <p>Our goal is much greater than becoming a succesful company, but to see lives touched and changed forever.</p>
+       <img class="heart" src="assets/images/certificate-icon.png">
+      <h3 class="about-item-title white">Certified</h3>
+      <p class="white">Bond insured, lead certified, and government approved we have what it takes to deliver</p>
     </div>
   </div>
 </section>

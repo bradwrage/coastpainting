@@ -7,6 +7,7 @@ body {
 
 h1, h2, h3, h4, h5, h6 {
 	-webkit-font-smoothing: antialiased;
+	@include font-face;
 }
 section {
 	p {
@@ -16,3 +17,32 @@ section {
 
 // Bottom Call to action 
 
+/**
+ * @license
+ * MyFonts Webfont Build ID 2715835, 2013-12-30T17:06:33-0500
+ * 
+ * The fonts listed in this notice are subject to the End User License
+ * Agreement(s) entered into by the website owner. All other parties are 
+ * explicitly restricted from using the Licensed Webfonts(s).
+ * 
+ * You may obtain a valid license at the URLs below.
+ * 
+ * Webfont: Museo Slab 500 by exljbris
+ * URL: http://www.myfonts.com/fonts/exljbris/museo-slab/500/
+ * Copyright: Copyright (c) 2009 by Jos Buivenga. All rights reserved.
+ * Licensed pageviews: Unlimited
+ * 
+ * 
+ * License: http://www.myfonts.com/viewlicense?type=web&buildid=2715835
+ * 
+ * © 2013 MyFonts Inc
+*/
+
+
+
+
+  
+@font-face {font-family: 'MuseoSlab-500';src: url('assets/webfonts/2970BB_0_0.eot');src: url('assets/webfonts/2970BB_0_0.eot?#iefix') format('embedded-opentype'),url('assets/webfonts/2970BB_0_0.woff') format('woff'),url('assets/webfonts/2970BB_0_0.ttf') format('truetype');}
+
+
+ 

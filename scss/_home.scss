@@ -74,8 +74,8 @@ section {
 
 .wrapper-container {
 	background: url('../assets/images/large-paint-hero.png')  no-repeat center center;
-	height: 400px;
-	margin-bottom: 60px;
+	height: 500px;
+	margin-bottom: 0px !important;
 	.hero-title {
 		color: white;
 		text-align: center;
@@ -99,7 +99,7 @@ section {
 	} 
 
 	@media only screen and (max-width: 700px) { 
-		margin-bottom: 30px !important;
+		
 		height: 100%;
 		padding-bottom: 20px;
 	}
@@ -116,7 +116,12 @@ section {
 		}
 	}
 
-
+.logos-container {
+	background-color: white;
+	height: 100%;
+	padding-top: 24px;
+	padding-bottom: 22px;
+}	
 .larger-body-text {
 	font-size: 16px;
 	font-weight: 300;
@@ -155,8 +160,11 @@ section {
 	}
 }
 
-.about-circuit {
-	margin-bottom: 50px;
+.about-coast {
+	background-color: #6DBBDB;
+	padding-top: 54px;
+	padding-bottom: 54px;
+	margin-bottom: 0px !important;
 	.about-category {
 		img {
 			margin: 0 auto;
@@ -192,6 +200,7 @@ section {
 
 	.about-item-title {
 		text-align: center;
+		font-size : 18px; 
 	}
 	@media only screen and (max-width: 700px) { 
 		margin-bottom: 0px;	
