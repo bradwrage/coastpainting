@@ -9,6 +9,7 @@
       <h1 class="hero-title">Professional and Certified Painting Experts</h1>
       <h2 class="header-subtitle"></h2>
     </div>
+
   </div>
 </section>
 
