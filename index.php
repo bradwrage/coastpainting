@@ -1,6 +1,48 @@
+<!doctype html>
+<!--[if IE 9]> <html class="lt-ie10" lang="en"> <![endif]-->
+<html class="no-js" lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Coast Painting</title>
+    <link rel="stylesheet" href="stylesheets/app.css" />
+    <script src="bower_components/modernizr/modernizr.js"></script>
 
+  </head>
 
-<?php include("includes/_header.php"); ?>
+  <body>
+
+<div class="off-canvas-wrap">
+  <div class="inner-wrap">
+    <nav class="tab-bar">
+      <section class="left-small show-for-small">
+        <a class="left-off-canvas-toggle menu-icon show" ><span></span></a>
+      </section>
+      <section class="middle tab-bar-section show-for-small">
+        <a href="index.php"><img class="logo" src="assets/images/coast-logo.png"></a>
+      </section>
+      <div class="row">
+        <div class="large-12 columns hide-for-small">
+          <a href="index.php"><img class="logo" src="assets/images/coast-logo.png"></a>
+          <ul class="nav">
+            <li><a href="technology.php">About</a></li>
+             <li><a href="contact.php" class="button white radius">Contact Us</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <aside class="left-off-canvas-menu">
+      <ul class="off-canvas-list">
+        <li><label>Coast Painting Inc.</label></li>
+        <li><a href="index.php">Home</a></li>
+        <li><a href="about.php">About</a></li>
+        <li><a href="contact.php">Contact</a></li>
+      </ul>
+    </aside>
+    
+    <section class="no-bottom">
+      <!-- content goes here -->
+    
 
 
 <section class="wrapper-container">
@@ -126,6 +168,7 @@
     <h2>Interested in working with us?</h2>
     <p class="lead">Let us know who you are and we'll get back to you asap.</p>
   </div>
+  
   </div>
   <form>
         <div class="row">
@@ -157,6 +200,31 @@
   <a class="close-reveal-modal">&#215;</a>
 </div>
 
-<?php include("includes/_footer.php"); ?>
+
+<footer>
+  <div class="row">
+    <div class="large-12 columns">
+      <ul class="nav footer">
+        <li><a href="index.php">Home</a></li>
+        <li><a href="contact.php">Contact</a></li>
+        <li><a href="terms.php">Terms of Use</a></li>
+      </ul>
+      <div class="copyright">
+        <span>Copyright ©2014 Coast Painting, Inc.</span>
+      </div>
+    </div>
+  </div>
+</footer>
+
+ <script src="bower_components/jquery/jquery.js"></script>
+    <script src="bower_components/foundation/js/foundation.min.js"></script>
+    <script src="js/app.js"></script>
+
+    </section>
+
+  <a class="exit-off-canvas"></a>
+
+  </div>
+</div>
 </body>
 </html>
