@@ -5,9 +5,13 @@ body {
 
 }
 
-h1, h2, h3, h4, h5, h6 {
+h1, h2, h3, h4, {
 	-webkit-font-smoothing: antialiased;
-	@include font-face;
+		font-family: 'MuseoSlab-500';
+		color: #454545;
+}
+h5, h6 {
+	-webkit-font-smoothing: antialiased;
 }
 section {
 	p {
@@ -42,7 +46,14 @@ section {
 
 
   
-@font-face {font-family: 'MuseoSlab-500';src: url('assets/webfonts/2970BB_0_0.eot');src: url('assets/webfonts/2970BB_0_0.eot?#iefix') format('embedded-opentype'),url('assets/webfonts/2970BB_0_0.woff') format('woff'),url('assets/webfonts/2970BB_0_0.ttf') format('truetype');}
+@font-face {
+	font-family: 'MuseoSlab-500';
+	src: url('../webfonts/2970BB_0_0.eot');
+	src: url('../webfonts/2970BB_0_0.eot?#iefix') format('embedded-opentype'),url('../webfonts/2970BB_0_0.woff') format('woff'),url('../webfonts/2970BB_0_0.ttf') format('truetype');
+}
+@mixin museo {
+	font-family: 'MuseoSlab-500';
+}
 
 
  

@@ -1,6 +1,11 @@
 footer {
 height: 60px;
-background-color: #1865a7;
+background-color: #d5d5d6;
+li {
+	a {
+		color: #454545 !important;
+	}
+}
 @media only screen and (max-width: 700px) { 
 	padding-top: 10px;
 	li {
@@ -10,6 +15,7 @@ background-color: #1865a7;
 	}
 }
 .copyright {
+	color: #454545 !important;
 	font-size: 12px;
 	padding-top: 25px;
 	color: #d2d2d2;

@@ -20,7 +20,6 @@
      </div>
   </div>
 </div>
-<!-- About Circuit TH -->
 
 <section class="about-coast">
   <div class="row">
@@ -48,145 +47,115 @@
   </div>
 </section>
 
-<!-- How it works -->
-<section class="how-it-works">
+<section class="background-image-container">
+  <div class="transparent-overlay">
+    <p>Our customers and clients are the most important factor in determninging our success. We want to provide the highest quality service and product possible.</p>
+  </div>
+</section>
+
+<section class="how-we-work">
   <div class="row">
     <div class="large-12 columns">
-      <h2 class="section-header blue">How it Works</h2>
-      <h5 class="section-subheader">Incredible advancements in neuroscience that has allowed for ways to control the human nervous system to beat genetic disorders and deficiencies.</h3>
+      <h2 class="section-header">How We Work</h2>
+      <h5 class="section-subheader">With over 30 years of experience in residential, commercial, and industrial painting</h3>
     </div>
   </div>
 
   <div class="row content-row">
+    
     <div class="large-6 columns">
-    <img class="" src="assets/images/scientist.jpg">
+       <div class="large-6 columns show-for-small">
+    <img class="" src="assets/images/brush-pic.jpg">
     </div>
-    <div class="large-6 columns research">
-      <h3>Optogenetics</h3>
-      <p class="main-content">Circuit Therapeutics is the industry leader in optogenetics and is pioneering new treatments through the use of this groundbreaking technology.  Optogenetics has gained rapid acceptance globally and is being used by hundreds of laboratories worldwide</p>
+      <h3>Thorough Service</h3>
+      <p class="main-content">With over 30 years of experience in residential, commercial, and industrial painting, we have what it takes to bring an exceptional product and service. With over 30 years of experience in residential, commercial, and industrial painting, we have what it takes to bring an exceptional product and service.</p>
+    </div>
+    <div class="large-6 columns hide-for-small">
+    <img class="" src="assets/images/brush-pic.jpg">
     </div>
   </div>
-  <div class="row content-row hide-for-small">
+  <div class="row content-row">
     <div class="large-6 columns">
-      <h3>Incredible Findings</h3>
-      <p class="main-content">Through region-specific injection of viral vectors containing cell-type specific promoters, opsins can be targeted with a high degree of specificity to particular neurons of interest. The opsin-activating light can be directed to specific locations in the brain, providing yet another region-specific targeting capacity of optogenetics.
-      </p></p>
-
+        <img class="" src="assets/images/paint-spray.jpg">
     </div>
-    <div class="large-6 columns research">
-        <img class="" src="assets/images/research.jpg">
+      <div class="large-6 columns">
+      <h3>Highest Quality</h3>
+      <p class="main-content">With over 30 years of experience in residential, commercial, and industrial painting, we have what it takes to bring an exceptional product and service. With over 30 years of experience in residential, commercial, and industrial painting, we have what it takes to bring an exceptional product and service.
+      </p>
     </div>
   </div>
 
-   <div class="row content-row show-for-small">
-    <div class="large-6 columns research">
-        <img class="research-pic" src="assets/images/research.jpg">
+   <div class="row content-row">
+     <div class="large-6 columns show-for-small">
+        <img class="research-pic" src="assets/images/light-house.jpg">
     </div>
-    <div class="large-6 columns research">
-      <h3>Incredible Findings</h3>
-      <p class="main-content">Through region-specific injection of viral vectors containing cell-type specific promoters, opsins can be targeted with a high degree of specificity to particular neurons of interest. The opsin-activating light can be directed to specific locations in the brain, providing yet another region-specific targeting capacity of optogenetics.
-      </p></p>
+    <div class="large-6 columns">
+      <h3>Superior Results</h3>
+      <p class="main-content">With over 30 years of experience in residential, commercial, and industrial painting, we have what it takes to bring an exceptional product and service. With over 30 years of experience in residential, commercial, and industrial painting, we have what it takes to bring an exceptional product and service.
+    </div>
+     <div class="large-6 columns hide-for-small">
+        <img class="research-pic" src="assets/images/light-house.jpg">
     </div>
   </div>
 </section>
 
-<section class="the-team team">
-  <div class="row">
-    <div class="large-12 columns">
-      <h2 class="section-header">The Team</h2>
-      <h5 class="section-subheader">Behind the expertise and our each and every member, is a desire to make a difference way beyond what anyone has thought possible. This ambition is what drives the team and makes going to work everyday incredibly exciting. </h3>
-    </div>
-  </div>
-  <div class="row">
-    <div class="large-12 columns">
-      <ul class="large-block-grid-3 alternate-grid">
-      <li>
-        <div class="person-container">
-          <img class="advisor-pic" src="assets/images/team/fred-moll-small.png">
-            <div class="right-about">
-             <h5 class="name">Fred Moll, <span>MD, PhD</span></h5>
-            <p>CEO and Chairman of the Board</p>
-          </div>
-        </div>
-      </li>
-      <li> 
-        <div class="person-container">
-         <img class="advisor-pic" src="assets/images/team/karoly-small.png">
-            <div class="right-about">
-            <h5 class="name">Karoly Nikolich, <span>PhD</span></h5>
-            <p>Founder of Circuit Therapeutics </p>
-
-          </div>
-        </div>
-      </li>
-      <li>
-         <div class="person-container">
-        <img class="advisor-pic" src="assets/images/team/mike-small.png">
-            <div class="right-about">
-            <h5 class="name">Michael Kaplitt, <span>MD,PhD</span></h5>
-            <p>Chief Scientific Officer and Sr. Vice President</p>
-          </div>
-        </div>
-      </li>
-
-           <li>
-        <div class="person-container">
-          <img class="advisor-pic" src="assets/images/team/steven-small.png">
-            <div class="right-about">
-            <h5 class="name">Stephen Braithwaite, <span>PhD</span></h5>
-            <p>Sr. Vice President Research</p>
-          </div>
-        </div>
-      </li>
-        <li>
-        <div class="person-container">
-           <img class="advisor-pic" src="assets/images/team/new-member.png">
-            <div class="right-about">
-            <h5 class="name">Dan Andersen <span></span></h5>
-            <p>Vice President Engineering</p>
-          </div>
-        </div>
-      </li>
-          <li>
-        <a class="new-job"href="jobs.php"><div class="person-container">
-           <img class="advisor-pic" src="assets/images/team/new-member.png">
-            <div class="right-about">
-            <h5 class="name">You <span></span></h5>
-            <p>Join us to become the next member of the team.</p>
-          </div>
-        </div>
-        </a>
-      </li>
-      </ul>
-      <div class="centered-btn see-the-team">
-    <a href="about.php" class="button centered-btn radius">Learn More</a>
-  </div>
-    </div>
+<section class="background-image-container house">
+  <div class="transparent-overlay">
+    <img class="expertise-proof" src="assets/images/expertise-proof.png">
   </div>
 </section>
 
-<section class="in-the-press">
+
+<section class="bottom-action">
   <div class="row">
     <div class="large-12 columns">
-      <h2 class="section-header blue">The Press</h2>
-      <h5 class="section-subheader ">Circuit Therapeutics and Boehringer Ingelheim announce signature of a research partnership agreement to discover new approaches to treating psychiatric disorders.</h3>
+      <h2 class="section-header">Get in Touch</h2>
+      <h5 class="section-subheader">Get an estimate today.</h3>
     </div>
   </div>
-  <div class="row row-margin mobile-left">
-    <div class="large-4 columns large-offset-2 news-snippet">
-      <img class="" src="assets/images/logos/collaboration.png">
-    </div>
-    <div class="large-6 columns">
-      <h5 >Boehringer Ingelheim and Circuit Therapeutics have entered into a research collaboration agreement for the discovery of new ways of treating psychiatric disorders. </h5>
-      <p class="source">MENLO PARK, California and INGELHEIM, Germany, December 18th, 2013</p>
-    </div>
-  </div>
+
   <div class="centered-btn">
-    <a href="news.php" class="button centered-btn radius">Learn More</a>
+    <a href="news.php" data-reveal-id="myModal" class="button centered-btn radius">Contact Us</a>
   </div>
 </section>
-</section>
 
+
+<div id="myModal" class="reveal-modal medium" data-reveal>
+  <div class="row">
+    <div class="large-12 columns">
+    <h2>Interested in working with us?</h2>
+    <p class="lead">Let us know who you are and we'll get back to you asap.</p>
+  </div>
+  </div>
+  <form>
+        <div class="row">
+          <div class="large-12 columns">
+            <input type="text" placeholder="Name" />
+          </div>
+        </div>
+        <div class="row">
+          <div class="large-12 columns">
+            <input type="text" placeholder="Email" />
+          </div>
+        </div>
+        <div class="row">
+          <div class="large-12 columns">
+            <input type="text" placeholder="Phone Number" />
+          </div>
+        </div>
+          <div class="row">
+          <div class="large-12 columns">
+            <textarea type="text" placeholder="Message"> </textarea>
+          </div>
+        </div>
+        <div class="row">
+          <div class="large-12 columns">
+            <a href="#" class="radius button submit-btn">Submit</a>
+          </div>
+        </div>
+      </form>
+  <a class="close-reveal-modal">&#215;</a>
+</div>
 
 <?php include("includes/_footer.php"); ?>
 </body>

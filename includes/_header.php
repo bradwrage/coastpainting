@@ -26,7 +26,7 @@
           <a href="index.php"><img class="logo" src="assets/images/coast-logo.png"></a>
           <ul class="nav">
             <li><a href="technology.php">About</a></li>
-             <li><a href="contact.php">Contact Us</a></li>
+             <li><a href="contact.php" class="button white radius">Contact Us</a></li>
           </ul>
         </div>
       </div>

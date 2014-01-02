@@ -1,14 +1,11 @@
 section {
-	margin-bottom: 60px;
-	@media only screen and (max-width: 700px) { 
-		margin-bottom: 30px;
-	}
+	margin-bottom: 0px;
 }
 .no-bottom {
 	margin-bottom: 0px !important;
 }
 .white {
-	color: white;
+	color: white !important;
 }
 .blue {
 	color: #05568B;
@@ -17,7 +14,7 @@ section {
 	margin-bottom: 130px !important;
 }
 .content-row {
-		margin-bottom: 60px;
+		margin-bottom: 100px;
 		@media only screen and (max-width: 700px) { 
 			margin-bottom: 10px;
 			h3 {
@@ -62,6 +59,7 @@ section {
   }
 }
 .button {
+	text-decoration: none !important;
 	@media only screen and (max-width: 700px) { 
 	padding: 16px 80px !important;
 	}
@@ -79,7 +77,8 @@ section {
 	.hero-title {
 		color: white;
 		text-align: center;
-		padding-top: 100px;
+		padding-top: 165px;
+		font-size: 60px;
 		-webkit-font-smoothing: antialiased;
 	}
 	.header-subtitle {
@@ -163,7 +162,7 @@ section {
 .about-coast {
 	background-color: #6DBBDB;
 	padding-top: 54px;
-	padding-bottom: 54px;
+	padding-bottom: 24px;
 	margin-bottom: 0px !important;
 	.about-category {
 		img {
@@ -183,6 +182,7 @@ section {
 			}
 		}
 		p {
+			text-align: center;
 			padding-left: 10px;
 			padding-right: 10px;
 		}
@@ -206,13 +206,43 @@ section {
 		margin-bottom: 0px;	
 		}
 }
+
+.background-image-container {
+	background: url('../assets/images/large-ladder.png')  no-repeat center center;
+	height: 500px;
+	margin-bottom: 0 !important;
+	position: relative;
+
+	&.house {
+		background: url('../assets/images/house-background.png')  no-repeat center center;
+		.expertise-proof {
+			padding: 65px;
+		}
+	}
+	.transparent-overlay {
+		background-color: rgba(243, 134, 48, 0.63);
+		width: 830px;
+	  height: 50%;
+	  overflow: auto;
+	  margin: auto;
+	  position: absolute;
+	  top: 0; left: 0; bottom: 0; right: 0;
+	  p {
+	  	padding: 10% 15% 0 15%;
+	  	color: white;
+	  }
+	}
+}
+
+
+
 .half-image {
 	background-color: gray;
 	height: 300px;
 	weight: 200px;
 }
-.how-it-works {
-	background-color: #EEEEEE;
+.how-we-work {
+	background-color: #f5f5f5;
 	padding: 40px 0;
 	// margin-bottom: 0px !important;
 	.research {
