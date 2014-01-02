@@ -1,0 +1,47 @@
+/* line 1, ../scss/homepage.scss */
+.top-nav {
+  background-color: white;
+  height: 60px;
+}
+/* line 5, ../scss/homepage.scss */
+.top-nav .logo {
+  width: 100px;
+  position: relative;
+  top: 9px;
+}
+/* line 11, ../scss/homepage.scss */
+.top-nav .nav {
+  list-style: none;
+  margin: 0;
+  padding-top: 10px;
+  text-align: center;
+  float: right;
+}
+/* line 17, ../scss/homepage.scss */
+.top-nav .nav li {
+  display: inline;
+}
+/* line 19, ../scss/homepage.scss */
+.top-nav .nav li a {
+  display: inline-block;
+  padding: 10px;
+}
+
+/* line 27, ../scss/homepage.scss */
+.wrapper-container {
+  background-color: gray;
+  height: 450px;
+}
+/* line 31, ../scss/homepage.scss */
+.wrapper-container .hero-title {
+  font-size: 48px;
+  text-align: center;
+  color: white;
+  padding-top: 10%;
+}
+/* line 37, ../scss/homepage.scss */
+.wrapper-container .header-subtitle {
+  font-size: 28px;
+  color: white;
+  text-align: center;
+}
