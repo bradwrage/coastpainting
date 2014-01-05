@@ -13,6 +13,10 @@ section {
 .last {
 	margin-bottom: 130px !important;
 }
+
+.customer-wins {
+	font-size: 20px;
+}
 .content-row {
 		margin-bottom: 100px;
 		@media only screen and (max-width: 700px) { 
@@ -71,6 +75,7 @@ section {
 }
 
 .wrapper-container {
+	background: url('../assets/images/large-paint-hero.jpg')  no-repeat center center;
 	height: 500px;
 	margin-bottom: 0px !important;
 	.hero-title {
@@ -188,7 +193,8 @@ section {
 	}
 	p {
 		font-weight: 300;
-		font-size: 14px;
+		font-size: 16px;
+		line-height: 20px !important;
 		@media only screen and (max-width: 700px) { 
 			font-size: 16px !important;
 			text-align: left!important;
@@ -207,13 +213,13 @@ section {
 }
 
 .background-image-container {
-	background: url('../assets/images/large-ladder.png')  no-repeat center center;
+	background: url('../assets/images/large-ladder.jpg')  no-repeat center center;
 	height: 500px;
 	margin-bottom: 0 !important;
 	position: relative;
 
 	&.house {
-		background: url('../assets/images/house-background.png')  no-repeat center center;
+		background: url('../assets/images/house-background.jpg')  no-repeat center center;
 		.expertise-proof {
 			padding: 65px;
 		}
