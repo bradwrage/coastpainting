@@ -7,7 +7,7 @@
     <title>Coast Painting</title>
     <link rel="stylesheet" href="stylesheets/app.css" />
     <script src="bower_components/modernizr/modernizr.js"></script>
-
+    <link type="text/css" rel="stylesheet" href="https://www.demandforced3.com/b/1/css/website.css" />
   </head>
 
   <body>

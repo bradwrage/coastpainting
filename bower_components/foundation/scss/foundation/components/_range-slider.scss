@@ -15,7 +15,7 @@
 
 $include-html-range-slider-classes: $include-html-classes !default;
 
-// These variabels define the slider bar styles
+// These variables define the slider bar styles
 $range-slider-bar-width: 100% !default;
 $range-slider-bar-height: rem-calc(16) !default;
 
@@ -31,7 +31,7 @@ $range-slider-active-segment-bg-color: scale-color($secondary-color, $lightness:
 $range-slider-vertical-bar-width: rem-calc(16) !default;
 $range-slider-vertical-bar-height: rem-calc(200) !default;
 
-// These variabels define the slider handle styles
+// These variables define the slider handle styles
 $range-slider-handle-width: rem-calc(32) !default;
 $range-slider-handle-height: rem-calc(22) !default;
 $range-slider-handle-position-top: rem-calc(-5) !default;
@@ -140,6 +140,9 @@ $range-slider-disabled-cursor: $cursor-disabled-value !default;
           position: absolute;
         }
         .range-slider-active-segment {
+          border-bottom-left-radius: inherit;
+          border-bottom-right-radius: inherit;
+          border-top-left-radius: initial;
           bottom: 0;
           height: auto;
           width: $range-slider-bar-height - rem-calc((strip-unit($range-slider-bar-border-width) * 2));
@@ -160,6 +163,8 @@ $range-slider-disabled-cursor: $cursor-disabled-value !default;
     }
     .range-slider-active-segment {
       background: $range-slider-active-segment-bg-color;
+      border-bottom-left-radius: inherit;
+      border-top-left-radius: inherit;
       display: inline-block;
       height: $range-slider-bar-height - rem-calc((strip-unit($range-slider-bar-border-width) * 2));
       position: absolute;

@@ -4,15 +4,17 @@
   Foundation.libs.abide = {
     name : 'abide',
 
-    version : '5.5.1',
+    version : '5.5.2',
 
     settings : {
-      live_validate : true,
-      validate_on_blur : true,
+      live_validate : true, // validate the form as you go
+      validate_on_blur : true, // validate whenever you focus/blur on an input field
       // validate_on: 'tab', // tab (when user tabs between fields), change (input changes), manual (call custom events) 
-      focus_on_invalid : true,
+      focus_on_invalid : true, // automatically bring the focus to an invalid input field
       error_labels : true, // labels with a for="inputId" will recieve an `error` class
-      error_class : 'error',
+      error_class : 'error', // labels with a for="inputId" will recieve an `error` class
+      // the amount of time Abide will take before it validates the form (in ms). 
+      // smaller time will result in faster validation
       timeout : 1000,
       patterns : {
         alpha : /^[a-zA-Z]+$/,
@@ -70,11 +72,19 @@
 
       this.invalid_attr = this.add_namespace('data-invalid');
 
+      function validate(originalSelf, e) {
+        clearTimeout(self.timer);
+        self.timer = setTimeout(function () {
+          self.validate([originalSelf], e);
+        }.bind(originalSelf), settings.timeout);
+      }
+
+
       form
         .off('.abide')
         .on('submit.fndtn.abide', function (e) {
           var is_ajax = /ajax/i.test(self.S(this).attr(self.attr_name()));
-          return self.validate(self.S(this).find('input, textarea, select').get(), e, is_ajax);
+          return self.validate(self.S(this).find('input, textarea, select').not(":hidden, [data-abide-ignore]").get(), e, is_ajax);
         })
         .on('validate.fndtn.abide', function (e) {
           if (settings.validate_on === 'manual') {
@@ -84,37 +94,31 @@
         .on('reset', function (e) {
           return self.reset($(this), e);          
         })
-        .find('input, textarea, select')
+        .find('input, textarea, select').not(":hidden, [data-abide-ignore]")
           .off('.abide')
           .on('blur.fndtn.abide change.fndtn.abide', function (e) {
             // old settings fallback
             // will be deprecated with F6 release
             if (settings.validate_on_blur && settings.validate_on_blur === true) {
-              clearTimeout(self.timer);
-              self.timer = setTimeout(function () {
-                self.validate([this], e);
-              }.bind(this), settings.timeout);
+              validate(this, e);
             }
             // new settings combining validate options into one setting
             if (settings.validate_on === 'change') {
-              self.validate([this], e);
+              validate(this, e);
             }
           })
           .on('keydown.fndtn.abide', function (e) {
             // old settings fallback
             // will be deprecated with F6 release
             if (settings.live_validate && settings.live_validate === true && e.which != 9) {
-              clearTimeout(self.timer);
-              self.timer = setTimeout(function () {
-                self.validate([this], e);
-              }.bind(this), settings.timeout);
+              validate(this, e);
             }
             // new settings combining validate options into one setting
             if (settings.validate_on === 'tab' && e.which === 9) {
-              self.validate([this], e);
+              validate(this, e);
             }
             else if (settings.validate_on === 'change') {
-              self.validate([this], e);
+              validate(this, e);
             }
           })
           .on('focus', function (e) {
@@ -132,7 +136,7 @@
 
       $('[' + self.invalid_attr + ']', form).removeAttr(self.invalid_attr);
       $('.' + self.settings.error_class, form).not('small').removeClass(self.settings.error_class);
-      $(':input', form).not(':button, :submit, :reset, :hidden').val('').removeAttr(self.invalid_attr);
+      $(':input', form).not(':button, :submit, :reset, :hidden, [data-abide-ignore]').val('').removeAttr(self.invalid_attr);
     },
 
     validate : function (els, e, is_ajax) {
@@ -242,13 +246,19 @@
               all_valid = valid && last_valid;
               last_valid = valid;
           }
-          if (valid) {
+          if (all_valid) {
               this.S(el).removeAttr(this.invalid_attr);
               parent.removeClass('error');
+              if (label.length > 0 && this.settings.error_labels) {
+                label.removeClass(this.settings.error_class).removeAttr('role');
+              }
               $(el).triggerHandler('valid');
           } else {
               this.S(el).attr(this.invalid_attr, '');
               parent.addClass('error');
+              if (label.length > 0 && this.settings.error_labels) {
+                label.addClass(this.settings.error_class).attr('role', 'alert');
+              }
               $(el).triggerHandler('invalid');
           }
         } else {
@@ -261,7 +271,6 @@
           }
 
           el_validations = [el_validations.every(function (valid) {return valid;})];
-
           if (el_validations[0]) {
             this.S(el).removeAttr(this.invalid_attr);
             el.setAttribute('aria-invalid', 'false');
@@ -290,8 +299,9 @@
             $(el).triggerHandler('invalid');
           }
         }
-        validations.push(el_validations[0]);
+        validations = validations.concat(el_validations);
       }
+
       return validations;
     },
 
