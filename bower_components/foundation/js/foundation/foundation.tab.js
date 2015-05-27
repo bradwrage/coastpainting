@@ -4,7 +4,7 @@
   Foundation.libs.tab = {
     name : 'tab',
 
-    version : '5.5.1',
+    version : '5.5.2',
 
     settings : {
       active_class : 'active',
@@ -228,8 +228,8 @@
       target.siblings().removeClass(settings.active_class).attr({'aria-hidden' : 'true',  tabindex : -1});
       target.addClass(settings.active_class).attr('aria-hidden', 'false').removeAttr('tabindex');
       settings.callback(tab);
-      target.triggerHandler('toggled', [tab]);
-      tabs.triggerHandler('toggled', [target]);
+      target.triggerHandler('toggled', [target]);
+      tabs.triggerHandler('toggled', [tab]);
 
       tab_link.off('keydown').on('keydown', interpret_keyup_action );
     },

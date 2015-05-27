@@ -4,7 +4,7 @@
   Foundation.libs.reveal = {
     name : 'reveal',
 
-    version : '5.5.1',
+    version : '5.5.2',
 
     locked : false,
 
@@ -62,7 +62,6 @@
               self.open.call(self, element);
             } else {
               var url = ajax === true ? element.attr('href') : ajax;
-
               self.open.call(self, element, {url : url}, { replaceContentSel : replaceContentSel });
             }
           }
@@ -156,7 +155,7 @@
       settings = settings || this.settings;
 
 
-      if (modal.hasClass('open') && target.attr('data-reveal-id') == modal.attr('id')) {
+      if (modal.hasClass('open') && target !== undefined && target.attr('data-reveal-id') == modal.attr('id')) {
         return self.close(modal);
       }
 
@@ -201,7 +200,6 @@
           this.show(modal, settings.css.open);
         } else {
           var old_success = typeof ajax_settings.success !== 'undefined' ? ajax_settings.success : null;
-
           $.extend(ajax_settings, {
             success : function (data, textStatus, jqXHR) {
               if ( $.isFunction(old_success) ) {

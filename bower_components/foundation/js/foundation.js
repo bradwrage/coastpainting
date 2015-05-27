@@ -157,42 +157,52 @@
     }
   };
 
-  /*
-    https://github.com/paulirish/matchMedia.js
-  */
+  /*! matchMedia() polyfill - Test a CSS media type/query in JS. Authors & copyright (c) 2012: Scott Jehl, Paul Irish, Nicholas Zakas, David Knight. Dual MIT/BSD license */
 
-  window.matchMedia = window.matchMedia || (function ( doc ) {
+  window.matchMedia || (window.matchMedia = function() {
+      "use strict";
 
-    'use strict';
+      // For browsers that support matchMedium api such as IE 9 and webkit
+      var styleMedia = (window.styleMedia || window.media);
 
-    var bool,
-        docElem = doc.documentElement,
-        refNode = docElem.firstElementChild || docElem.firstChild,
-        // fakeBody required for <FF4 when executed in <head>
-        fakeBody = doc.createElement( 'body' ),
-        div = doc.createElement( 'div' );
+      // For those that don't support matchMedium
+      if (!styleMedia) {
+          var style       = document.createElement('style'),
+              script      = document.getElementsByTagName('script')[0],
+              info        = null;
 
-    div.id = 'mq-test-1';
-    div.style.cssText = 'position:absolute;top:-100em';
-    fakeBody.style.background = 'none';
-    fakeBody.appendChild(div);
+          style.type  = 'text/css';
+          style.id    = 'matchmediajs-test';
 
-    return function (q) {
+          script.parentNode.insertBefore(style, script);
 
-      div.innerHTML = '&shy;<style media="' + q + '"> #mq-test-1 { width: 42px; }</style>';
+          // 'style.currentStyle' is used by IE <= 8 and 'window.getComputedStyle' for all other browsers
+          info = ('getComputedStyle' in window) && window.getComputedStyle(style, null) || style.currentStyle;
 
-      docElem.insertBefore( fakeBody, refNode );
-      bool = div.offsetWidth === 42;
-      docElem.removeChild( fakeBody );
+          styleMedia = {
+              matchMedium: function(media) {
+                  var text = '@media ' + media + '{ #matchmediajs-test { width: 1px; } }';
 
-      return {
-        matches : bool,
-        media : q
+                  // 'style.styleSheet' is used by IE <= 8 and 'style.textContent' for all other browsers
+                  if (style.styleSheet) {
+                      style.styleSheet.cssText = text;
+                  } else {
+                      style.textContent = text;
+                  }
+
+                  // Test if media query is true or false
+                  return info.width === '1px';
+              }
+          };
+      }
+
+      return function(media) {
+          return {
+              matches: styleMedia.matchMedium(media || 'all'),
+              media: media || 'all'
+          };
       };
-
-    };
-
-  }( document ));
+  }());
 
   /*
    * jquery.requestAnimationFrame
@@ -283,7 +293,7 @@
   window.Foundation = {
     name : 'Foundation',
 
-    version : '5.5.1',
+    version : '5.5.2',
 
     media_queries : {
       'small'       : S('.foundation-mq-small').css('font-family').replace(/^[\/\\'"]+|(;\s?})+|[\/\\'"]+$/g, ''),
@@ -720,15 +730,17 @@
   Foundation.libs.abide = {
     name : 'abide',
 
-    version : '5.5.1',
+    version : '5.5.2',
 
     settings : {
-      live_validate : true,
-      validate_on_blur : true,
+      live_validate : true, // validate the form as you go
+      validate_on_blur : true, // validate whenever you focus/blur on an input field
       // validate_on: 'tab', // tab (when user tabs between fields), change (input changes), manual (call custom events) 
-      focus_on_invalid : true,
+      focus_on_invalid : true, // automatically bring the focus to an invalid input field
       error_labels : true, // labels with a for="inputId" will recieve an `error` class
-      error_class : 'error',
+      error_class : 'error', // labels with a for="inputId" will recieve an `error` class
+      // the amount of time Abide will take before it validates the form (in ms). 
+      // smaller time will result in faster validation
       timeout : 1000,
       patterns : {
         alpha : /^[a-zA-Z]+$/,
@@ -786,11 +798,19 @@
 
       this.invalid_attr = this.add_namespace('data-invalid');
 
+      function validate(originalSelf, e) {
+        clearTimeout(self.timer);
+        self.timer = setTimeout(function () {
+          self.validate([originalSelf], e);
+        }.bind(originalSelf), settings.timeout);
+      }
+
+
       form
         .off('.abide')
         .on('submit.fndtn.abide', function (e) {
           var is_ajax = /ajax/i.test(self.S(this).attr(self.attr_name()));
-          return self.validate(self.S(this).find('input, textarea, select').get(), e, is_ajax);
+          return self.validate(self.S(this).find('input, textarea, select').not(":hidden, [data-abide-ignore]").get(), e, is_ajax);
         })
         .on('validate.fndtn.abide', function (e) {
           if (settings.validate_on === 'manual') {
@@ -800,37 +820,31 @@
         .on('reset', function (e) {
           return self.reset($(this), e);          
         })
-        .find('input, textarea, select')
+        .find('input, textarea, select').not(":hidden, [data-abide-ignore]")
           .off('.abide')
           .on('blur.fndtn.abide change.fndtn.abide', function (e) {
             // old settings fallback
             // will be deprecated with F6 release
             if (settings.validate_on_blur && settings.validate_on_blur === true) {
-              clearTimeout(self.timer);
-              self.timer = setTimeout(function () {
-                self.validate([this], e);
-              }.bind(this), settings.timeout);
+              validate(this, e);
             }
             // new settings combining validate options into one setting
             if (settings.validate_on === 'change') {
-              self.validate([this], e);
+              validate(this, e);
             }
           })
           .on('keydown.fndtn.abide', function (e) {
             // old settings fallback
             // will be deprecated with F6 release
             if (settings.live_validate && settings.live_validate === true && e.which != 9) {
-              clearTimeout(self.timer);
-              self.timer = setTimeout(function () {
-                self.validate([this], e);
-              }.bind(this), settings.timeout);
+              validate(this, e);
             }
             // new settings combining validate options into one setting
             if (settings.validate_on === 'tab' && e.which === 9) {
-              self.validate([this], e);
+              validate(this, e);
             }
             else if (settings.validate_on === 'change') {
-              self.validate([this], e);
+              validate(this, e);
             }
           })
           .on('focus', function (e) {
@@ -848,7 +862,7 @@
 
       $('[' + self.invalid_attr + ']', form).removeAttr(self.invalid_attr);
       $('.' + self.settings.error_class, form).not('small').removeClass(self.settings.error_class);
-      $(':input', form).not(':button, :submit, :reset, :hidden').val('').removeAttr(self.invalid_attr);
+      $(':input', form).not(':button, :submit, :reset, :hidden, [data-abide-ignore]').val('').removeAttr(self.invalid_attr);
     },
 
     validate : function (els, e, is_ajax) {
@@ -958,13 +972,19 @@
               all_valid = valid && last_valid;
               last_valid = valid;
           }
-          if (valid) {
+          if (all_valid) {
               this.S(el).removeAttr(this.invalid_attr);
               parent.removeClass('error');
+              if (label.length > 0 && this.settings.error_labels) {
+                label.removeClass(this.settings.error_class).removeAttr('role');
+              }
               $(el).triggerHandler('valid');
           } else {
               this.S(el).attr(this.invalid_attr, '');
               parent.addClass('error');
+              if (label.length > 0 && this.settings.error_labels) {
+                label.addClass(this.settings.error_class).attr('role', 'alert');
+              }
               $(el).triggerHandler('invalid');
           }
         } else {
@@ -977,7 +997,6 @@
           }
 
           el_validations = [el_validations.every(function (valid) {return valid;})];
-
           if (el_validations[0]) {
             this.S(el).removeAttr(this.invalid_attr);
             el.setAttribute('aria-invalid', 'false');
@@ -1006,8 +1025,9 @@
             $(el).triggerHandler('invalid');
           }
         }
-        validations.push(el_validations[0]);
+        validations = validations.concat(el_validations);
       }
+
       return validations;
     },
 
@@ -1122,7 +1142,7 @@
   Foundation.libs.accordion = {
     name : 'accordion',
 
-    version : '5.5.1',
+    version : '5.5.2',
 
     settings : {
       content_class : 'content',
@@ -1211,7 +1231,7 @@
   Foundation.libs.alert = {
     name : 'alert',
 
-    version : '5.5.1',
+    version : '5.5.2',
 
     settings : {
       callback : function () {}
@@ -1255,14 +1275,16 @@
   Foundation.libs.clearing = {
     name : 'clearing',
 
-    version : '5.5.1',
+    version : '5.5.2',
 
     settings : {
       templates : {
         viewing : '<a href="#" class="clearing-close">&times;</a>' +
           '<div class="visible-img" style="display: none"><div class="clearing-touch-label"></div><img src="data:image/gif;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs%3D" alt="" />' +
           '<p class="clearing-caption"></p><a href="#" class="clearing-main-prev"><span></span></a>' +
-          '<a href="#" class="clearing-main-next"><span></span></a></div>'
+          '<a href="#" class="clearing-main-next"><span></span></a></div>' +
+          '<img class="clearing-preload-next" style="display: none" src="data:image/gif;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs%3D" alt="" />' +
+          '<img class="clearing-preload-prev" style="display: none" src="data:image/gif;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs%3D" alt="" />'
       },
 
       // comma delimited list of selectors that, on click, will close clearing,
@@ -1452,7 +1474,8 @@
           visible_image = self.S('.visible-img', container),
           image = self.S('img', visible_image).not($image),
           label = self.S('.clearing-touch-label', container),
-          error = false;
+          error = false,
+          loaded = {};
 
       // Event to disable scrolling on touch devices when Clearing is activated
       $('body').on('touchmove', function (e) {
@@ -1497,9 +1520,17 @@
       if (!this.locked()) {
         visible_image.trigger('open.fndtn.clearing');
         // set the image to the selected thumbnail
-        image
-          .attr('src', this.load($image))
-          .css('visibility', 'hidden');
+        loaded = this.load($image);
+        if (loaded.interchange) {
+          image
+            .attr('data-interchange', loaded.interchange)
+            .foundation('interchange', 'reflow');
+        } else {
+          image
+            .attr('src', loaded.src)
+            .attr('data-interchange', '');
+        }
+        image.css('visibility', 'hidden');
 
         startLoad.call(this);
       }
@@ -1633,37 +1664,55 @@
     // image loading and preloading
 
     load : function ($image) {
-      var href;
+      var href,
+          interchange,
+          closest_a;
 
       if ($image[0].nodeName === 'A') {
         href = $image.attr('href');
+        interchange = $image.data('clearing-interchange');
       } else {
-        href = $image.closest('a').attr('href');
+        closest_a = $image.closest('a');
+        href = closest_a.attr('href');
+        interchange = closest_a.data('clearing-interchange');
       }
 
       this.preload($image);
 
-      if (href) {
-        return href;
+      return {
+        'src': href ? href : $image.attr('src'),
+        'interchange': href ? interchange : $image.data('clearing-interchange')
       }
-      return $image.attr('src');
     },
 
     preload : function ($image) {
       this
-        .img($image.closest('li').next())
-        .img($image.closest('li').prev());
+        .img($image.closest('li').next(), 'next')
+        .img($image.closest('li').prev(), 'prev');
     },
 
-    img : function (img) {
+    img : function (img, sibling_type) {
       if (img.length) {
-        var new_img = new Image(),
-            new_a = this.S('a', img);
+        var preload_img = $('.clearing-preload-' + sibling_type),
+            new_a = this.S('a', img),
+            src,
+            interchange,
+            image;
 
         if (new_a.length) {
-          new_img.src = new_a.attr('href');
+          src = new_a.attr('href');
+          interchange = new_a.data('clearing-interchange');
         } else {
-          new_img.src = this.S('img', img).attr('src');
+          image = this.S('img', img);
+          src = image.attr('src');
+          interchange = image.data('clearing-interchange');
+        }
+
+        if (interchange) {
+          preload_img.attr('data-interchange', interchange);
+        } else {
+          preload_img.attr('src', src);
+          preload_img.attr('data-interchange', '');
         }
       }
       return this;
@@ -1813,14 +1862,13 @@
   Foundation.libs.dropdown = {
     name : 'dropdown',
 
-    version : '5.5.1',
+    version : '5.5.2',
 
     settings : {
       active_class : 'open',
       disabled_class : 'disabled',
       mega_class : 'mega',
       align : 'bottom',
-      pip : 'default',
       is_hover : false,
       hover_timeout : 150,
       opened : function () {},
@@ -1844,7 +1892,7 @@
           var settings = S(this).data(self.attr_name(true) + '-init') || self.settings;
           if (!settings.is_hover || Modernizr.touch) {
             e.preventDefault();
-            if (S(this).parent('[data-reveal-id]')) {
+            if (S(this).parent('[data-reveal-id]').length) {
               e.stopPropagation();
             }
             self.toggle($(this));
@@ -1860,15 +1908,9 @@
           if ($this.data(self.data_attr())) {
             dropdown = S('#' + $this.data(self.data_attr()));
             target = $this;
-            self.last_target = target;
           } else {
             dropdown = $this;
-
-            if (self.last_target) {
-              target = self.last_target;
-            } else {
-              target = S("[" + self.attr_name() + "='" + dropdown.attr('id') + "']");
-            }
+            target = S('[' + self.attr_name() + '="' + dropdown.attr('id') + '"]');
           }
 
           var settings = target.data(self.attr_name(true) + '-init') || self.settings;
@@ -2090,44 +2132,35 @@
 
         //lets see if the panel will be off the screen
         //get the actual width of the page and store it
-        p.bodyWidth = window.innerWidth;
+        var actualBodyWidth;
         if (document.getElementsByClassName('row')[0]) {
-          p.bodyWidth = document.getElementsByClassName('row')[0].clientWidth;
-        }
-
-        return p;
-      },
-
-      _position_bottom : function(d,t,s,p) {
-        if(d.outerWidth() > t.outerWidth()) {
-          //miss right
-          if (p.left + d.outerWidth() > p.bodyWidth) {
-            //miss left
-            if(p.left - (d.outerWidth() - t.outerWidth()) < 0) {
-              // set triggered right if the dropdown won't fit inside the first .row
-              // in either the left or right orientation.
-              p.triggeredRight = true;
-              p.missLeft = true;
-            } else {
-              p.missRight = true;
-            }
-          }
-        }
-
-        if (t.outerWidth() > d.outerWidth() && s.pip == 'center') {
-          p.offset = (t.outerWidth() - d.outerWidth()) / 2;
-        }
-        else if (p.triggeredRight) {
-          if(d.outerWidth() < p.bodyWidth) {
-            p.offset = (p.bodyWidth - p.left) - d.outerWidth();
-          } else {
-            p.offset = -p.left;
-          }
-        }
-        else if (p.missRight || self.rtl) {
-          p.offset = -d.outerWidth() + t.outerWidth();
+          actualBodyWidth = document.getElementsByClassName('row')[0].clientWidth;
         } else {
-          p.offset = 0;
+          actualBodyWidth = window.innerWidth;
+        }
+
+        var actualMarginWidth = (window.innerWidth - actualBodyWidth) / 2;
+        var actualBoundary = actualBodyWidth;
+
+        if (!this.hasClass('mega')) {
+          //miss top
+          if (t.offset().top <= this.outerHeight()) {
+            p.missTop = true;
+            actualBoundary = window.innerWidth - actualMarginWidth;
+            p.leftRightFlag = true;
+          }
+
+          //miss right
+          if (t.offset().left + this.outerWidth() > t.offset().left + actualMarginWidth && t.offset().left - actualMarginWidth > this.outerWidth()) {
+            p.missRight = true;
+            p.missLeft = false;
+          }
+
+          //miss left
+          if (t.offset().left - this.outerWidth() <= 0) {
+            p.missLeft = true;
+            p.missRight = false;
+          }
         }
 
         return p;
@@ -2135,84 +2168,75 @@
 
       top : function (t, s) {
         var self = Foundation.libs.dropdown,
-            p = self.dirs._base.call(this, t),
-            offsetTop = -this.outerHeight();
-
-        p = self.dirs._position_bottom(this,t,s,p);
+            p = self.dirs._base.call(this, t);
 
         this.addClass('drop-top');
 
-        //miss top
-        if (t.offset().top <= this.outerHeight()) {
-          p.missTop = true;
-          p.leftRightFlag = true;
+        if (p.missTop == true) {
+          p.top = p.top + t.outerHeight() + this.outerHeight();
           this.removeClass('drop-top');
-          offsetTop = t.outerHeight();
         }
 
-        if (self.rtl || t.outerWidth() < this.outerWidth() || self.small() || this.hasClass(s.mega_menu)) {
-          self.adjust_pip(this,t,s,p);
+        if (p.missRight == true) {
+          p.left = p.left - this.outerWidth() + t.outerWidth();
         }
 
-        return {left : p.left + p.offset, top : p.top + offsetTop};
+        if (t.outerWidth() < this.outerWidth() || self.small() || this.hasClass(s.mega_menu)) {
+          self.adjust_pip(this, t, s, p);
+        }
+
+        if (Foundation.rtl) {
+          return {left : p.left - this.outerWidth() + t.outerWidth(),
+            top : p.top - this.outerHeight()};
+        }
+
+        return {left : p.left, top : p.top - this.outerHeight()};
       },
 
       bottom : function (t, s) {
         var self = Foundation.libs.dropdown,
             p = self.dirs._base.call(this, t);
-        
-        p = self.dirs._position_bottom(this,t,s,p);       
 
-        // Is this if statement really worth it?
-        // I assume it is here to avoid unnecessary sheet.insertRule calls, but how expensive are they?
-        if (p.offset || t.outerWidth() < this.outerWidth() || self.small() || this.hasClass(s.mega_menu)) {
-          self.adjust_pip(this,t,s,p);
+        if (p.missRight == true) {
+          p.left = p.left - this.outerWidth() + t.outerWidth();
         }
 
-        return {left : p.left + p.offset, top : p.top + t.outerHeight()};
+        if (t.outerWidth() < this.outerWidth() || self.small() || this.hasClass(s.mega_menu)) {
+          self.adjust_pip(this, t, s, p);
+        }
+
+        if (self.rtl) {
+          return {left : p.left - this.outerWidth() + t.outerWidth(), top : p.top + t.outerHeight()};
+        }
+
+        return {left : p.left, top : p.top + t.outerHeight()};
       },
 
       left : function (t, s) {
-        var self = Foundation.libs.dropdown,
-            p = self.dirs._base.call(this, t);
-        p.offset = -this.outerWidth();
+        var p = Foundation.libs.dropdown.dirs._base.call(this, t);
 
         this.addClass('drop-left');
 
-        //miss left
-        if (p.left - this.outerWidth() <= 0) {
-          p.missLeft = true;
-          p.missRight = false;
+        if (p.missLeft == true) {
+          p.left =  p.left + this.outerWidth();
           p.top = p.top + t.outerHeight();
           this.removeClass('drop-left');
-          p = self.dirs._position_bottom(this,t,s,p);
-          self.adjust_pip(this,t,s,p);
-        } else {
-          self.adjust_pip_vertical(this,t,s,p);
         }
 
-        return {left : p.left + p.offset, top : p.top};
+        return {left : p.left - this.outerWidth(), top : p.top};
       },
 
       right : function (t, s) {
-        var self = Foundation.libs.dropdown,
-            p = self.dirs._base.call(this, t);
-
-        p.offset = t.outerWidth();
+        var p = Foundation.libs.dropdown.dirs._base.call(this, t);
 
         this.addClass('drop-right');
 
-        //miss right
-        if (p.left + this.outerWidth() + t.outerWidth() > p.bodyWidth) {
-          p.missRight = true;
-          p.missLeft = false;
+        if (p.missRight == true) {
+          p.left = p.left - this.outerWidth();
           p.top = p.top + t.outerHeight();
           this.removeClass('drop-right');
-          p = self.dirs._position_bottom(this,t,s,p);
-          self.adjust_pip(this,t,s,p);
         } else {
           p.triggeredRight = true;
-          self.adjust_pip_vertical(this,t,s,p);
         }
 
         var self = Foundation.libs.dropdown;
@@ -2231,23 +2255,9 @@
           pip_offset_base = 8;
 
       if (dropdown.hasClass(settings.mega_class)) {
-        pip_offset_base = position.left + (target.outerWidth()/2) - 8;
-      }
-      else if (this.small()) {
-        pip_offset_base = position.left;
-        if (settings.pip == 'center') {
-          pip_offset_base += (target.outerWidth()/2) - 15;
-        }
-      }
-      else if (settings.pip == 'center') {
-        if(target.outerWidth() < dropdown.outerWidth()){
-          pip_offset_base = (target.outerWidth()/2) - position.offset - 7;
-        } else {
-          pip_offset_base = (dropdown.outerWidth()/2) - 7;
-        }
-      }
-      else if (position.missRight) {
-        pip_offset_base += target.outerWidth() - 30;
+        pip_offset_base = position.left + (target.outerWidth() / 2) - 8;
+      } else if (this.small()) {
+        pip_offset_base += position.left - 8;
       }
 
       this.rule_idx = sheet.cssRules.length;
@@ -2258,32 +2268,22 @@
           css_before = 'left: ' + pip_offset_base + 'px;',
           css_after  = 'left: ' + (pip_offset_base - 1) + 'px;';
 
-      if (sheet.insertRule) {
-        sheet.insertRule([sel_before, '{', css_before, '}'].join(' '), this.rule_idx);
-        sheet.insertRule([sel_after, '{', css_after, '}'].join(' '), this.rule_idx + 1);
-      } else {
-        sheet.addRule(sel_before, css_before, this.rule_idx);
-        sheet.addRule(sel_after, css_after, this.rule_idx + 1);
-      }
-    },
-
-    adjust_pip_vertical : function (dropdown,target,settings,position) {
-      var sheet = Foundation.stylesheet,
-          pip_offset_base = 10,
-          pip_halfheight = 14;
-
-      if (settings.pip == 'center') {
-        pip_offset_base = (target.outerHeight() - pip_halfheight) / 2;
+      if (position.missRight == true) {
+        pip_offset_base = dropdown.outerWidth() - 23;
+        sel_before = '.f-dropdown.open:before',
+        sel_after  = '.f-dropdown.open:after',
+        css_before = 'left: ' + pip_offset_base + 'px;',
+        css_after  = 'left: ' + (pip_offset_base - 1) + 'px;';
       }
 
-      this.rule_idx = sheet.cssRules.length;
+      //just a case where right is fired, but its not missing right
+      if (position.triggeredRight == true) {
+        sel_before = '.f-dropdown.open:before',
+        sel_after  = '.f-dropdown.open:after',
+        css_before = 'left:-12px;',
+        css_after  = 'left:-14px;';
+      }
 
-      //default
-      var sel_before = '.f-dropdown.open:before',
-          sel_after  = '.f-dropdown.open:after',
-          css_before = 'top: ' + pip_offset_base + 'px;',
-          css_after  = 'top: ' + (pip_offset_base - 1) + 'px;';
-        
       if (sheet.insertRule) {
         sheet.insertRule([sel_before, '{', css_before, '}'].join(' '), this.rule_idx);
         sheet.insertRule([sel_after, '{', css_after, '}'].join(' '), this.rule_idx + 1);
@@ -2326,13 +2326,14 @@
   Foundation.libs.equalizer = {
     name : 'equalizer',
 
-    version : '5.5.1',
+    version : '5.5.2',
 
     settings : {
       use_tallest : true,
       before_height_change : $.noop,
       after_height_change : $.noop,
-      equalize_on_stack : false
+      equalize_on_stack : false,
+      act_on_hidden_el: false
     },
 
     init : function (scope, method, options) {
@@ -2350,18 +2351,25 @@
     equalize : function (equalizer) {
       var isStacked = false,
           group = equalizer.data('equalizer'),
-          vals = group ? equalizer.find('['+this.attr_name()+'-watch="'+group+'"]:visible') : equalizer.find('['+this.attr_name()+'-watch]:visible'),
-          settings = equalizer.data(this.attr_name(true)+'-init'),
+          settings = equalizer.data(this.attr_name(true)+'-init') || this.settings,
+          vals,
           firstTopOffset;
 
+      if (settings.act_on_hidden_el) {
+        vals = group ? equalizer.find('['+this.attr_name()+'-watch="'+group+'"]') : equalizer.find('['+this.attr_name()+'-watch]');
+      }
+      else {
+        vals = group ? equalizer.find('['+this.attr_name()+'-watch="'+group+'"]:visible') : equalizer.find('['+this.attr_name()+'-watch]:visible');
+      }
+      
       if (vals.length === 0) {
         return;
       }
-      
+
       settings.before_height_change();
       equalizer.trigger('before-height-change.fndth.equalizer');
       vals.height('inherit');
-      
+
       if (settings.equalize_on_stack === false) {
         firstTopOffset = vals.first().offset().top;
         vals.each(function () {
@@ -2384,7 +2392,7 @@
         var min = Math.min.apply(null, heights);
         vals.css('height', min);
       }
-      
+
       settings.after_height_change();
       equalizer.trigger('after-height-change.fndtn.equalizer');
     },
@@ -2393,9 +2401,24 @@
       var self = this;
 
       this.S('[' + this.attr_name() + ']', this.scope).each(function () {
-        var $eq_target = $(this);
+        var $eq_target = $(this),
+            media_query = $eq_target.data('equalizer-mq'),
+            ignore_media_query = true;
+
+        if (media_query) {
+          media_query = 'is_' + media_query.replace(/-/g, '_');
+          if (Foundation.utils.hasOwnProperty(media_query)) {
+            ignore_media_query = false;
+          }
+        }
+
         self.image_loaded(self.S('img', this), function () {
-          self.equalize($eq_target)
+          if (ignore_media_query || Foundation.utils[media_query]()) {
+            self.equalize($eq_target)
+          } else {
+            var vals = $eq_target.find('[' + self.attr_name() + '-watch]:visible');
+            vals.css('height', 'auto');
+          }
         });
       });
     }
@@ -2408,7 +2431,7 @@
   Foundation.libs.interchange = {
     name : 'interchange',
 
-    version : '5.5.1',
+    version : '5.5.2',
 
     cache : {},
 
@@ -2770,7 +2793,7 @@
   Foundation.libs.joyride = {
     name : 'joyride',
 
-    version : '5.5.1',
+    version : '5.5.2',
 
     defaults : {
       expose                   : false,     // turn on or off the expose feature
@@ -3701,7 +3724,7 @@
   Foundation.libs['magellan-expedition'] = {
     name : 'magellan-expedition',
 
-    version : '5.5.1',
+    version : '5.5.2',
 
     settings : {
       active_class : 'active',
@@ -3729,32 +3752,40 @@
 
       S(self.scope)
         .off('.magellan')
-        .on('click.fndtn.magellan', '[' + self.add_namespace('data-magellan-arrival') + '] a[href^="#"]', function (e) {
-          e.preventDefault();
-          var expedition = $(this).closest('[' + self.attr_name() + ']'),
-              settings = expedition.data('magellan-expedition-init'),
-              hash = this.hash.split('#').join(''),
-              target = $('a[name="' + hash + '"]');
+        .on('click.fndtn.magellan', '[' + self.add_namespace('data-magellan-arrival') + '] a[href*=#]', function (e) {
+          var sameHost = ((this.hostname === location.hostname) || !this.hostname),
+              samePath = self.filterPathname(location.pathname) === self.filterPathname(this.pathname),
+              testHash = this.hash.replace(/(:|\.|\/)/g, '\\$1'),
+              anchor = this;
 
-          if (target.length === 0) {
-            target = $('#' + hash);
+          if (sameHost && samePath && testHash) {
+            e.preventDefault();
+            var expedition = $(this).closest('[' + self.attr_name() + ']'),
+                settings = expedition.data('magellan-expedition-init'),
+                hash = this.hash.split('#').join(''),
+                target = $('a[name="' + hash + '"]');
 
-          }
+            if (target.length === 0) {
+              target = $('#' + hash);
 
-          // Account for expedition height if fixed position
-          var scroll_top = target.offset().top - settings.destination_threshold + 1;
-          if (settings.offset_by_height) {
-            scroll_top = scroll_top - expedition.outerHeight();
-          }
-          $('html, body').stop().animate({
-            'scrollTop' : scroll_top
-          }, settings.duration, settings.easing, function () {
-            if (history.pushState) {
-              history.pushState(null, null, '#' + hash);
-            } else {
-              location.hash = '#' + hash;
             }
-          });
+
+            // Account for expedition height if fixed position
+            var scroll_top = target.offset().top - settings.destination_threshold + 1;
+            if (settings.offset_by_height) {
+              scroll_top = scroll_top - expedition.outerHeight();
+            }
+            $('html, body').stop().animate({
+              'scrollTop' : scroll_top
+            }, settings.duration, settings.easing, function () {
+              if (history.pushState) {
+                        history.pushState(null, null, anchor.pathname + '#' + hash);
+              }
+                    else {
+                        location.hash = anchor.pathname + '#' + hash;
+                    }
+            });
+          }
         })
         .on('scroll.fndtn.magellan', self.throttle(this.check_for_arrivals.bind(this), settings.throttle_delay));
     },
@@ -3887,6 +3918,14 @@
       this.S(window).off('.magellan');
     },
 
+    filterPathname : function (pathname) {
+      pathname = pathname || '';
+      return pathname
+          .replace(/^\//,'')
+          .replace(/(?:index|default).[a-zA-Z]{3,4}$/,'')
+          .replace(/\/$/,'');
+    },
+
     reflow : function () {
       var self = this;
       // remove placeholder expeditions used for height calculation purposes
@@ -3901,7 +3940,7 @@
   Foundation.libs.offcanvas = {
     name : 'offcanvas',
 
-    version : '5.5.1',
+    version : '5.5.2',
 
     settings : {
       open_method : 'move',
@@ -4457,7 +4496,7 @@
   Foundation.libs.orbit = {
     name : 'orbit',
 
-    version : '5.5.1',
+    version : '5.5.2',
 
     settings : {
       animation : 'slide',
@@ -4531,7 +4570,7 @@
   Foundation.libs.reveal = {
     name : 'reveal',
 
-    version : '5.5.1',
+    version : '5.5.2',
 
     locked : false,
 
@@ -4589,7 +4628,6 @@
               self.open.call(self, element);
             } else {
               var url = ajax === true ? element.attr('href') : ajax;
-
               self.open.call(self, element, {url : url}, { replaceContentSel : replaceContentSel });
             }
           }
@@ -4683,7 +4721,7 @@
       settings = settings || this.settings;
 
 
-      if (modal.hasClass('open') && target.attr('data-reveal-id') == modal.attr('id')) {
+      if (modal.hasClass('open') && target !== undefined && target.attr('data-reveal-id') == modal.attr('id')) {
         return self.close(modal);
       }
 
@@ -4728,7 +4766,6 @@
           this.show(modal, settings.css.open);
         } else {
           var old_success = typeof ajax_settings.success !== 'undefined' ? ajax_settings.success : null;
-
           $.extend(ajax_settings, {
             success : function (data, textStatus, jqXHR) {
               if ( $.isFunction(old_success) ) {
@@ -5032,7 +5069,7 @@
   Foundation.libs.slider = {
     name : 'slider',
 
-    version : '5.5.1',
+    version : '5.5.2',
 
     settings : {
       start : 0,
@@ -5091,6 +5128,24 @@
         .on('resize.fndtn.slider', self.throttle(function (e) {
           self.reflow();
         }, 300));
+
+      // update slider value as users change input value
+      this.S('[' + this.attr_name() + ']').each(function () {
+        var slider = $(this),
+            handle = slider.children('.range-slider-handle')[0],
+            settings = self.initialize_settings(handle);
+
+        if (settings.display_selector != '') {
+          $(settings.display_selector).each(function(){
+            if (this.hasOwnProperty('value')) {
+              $(this).change(function(){
+                // is there a better way to do this?
+                slider.foundation("slider", "set_value", $(this).val());
+              });
+            }
+          });
+        }
+      });
     },
 
     get_cursor_position : function (e, xy) {
@@ -5171,7 +5226,7 @@
 
       $hidden_inputs.val(value);
       if (settings.trigger_input_change) {
-          $hidden_inputs.trigger('change');
+          $hidden_inputs.trigger('change.fndtn.slider');
       }
 
       if (!$handle[0].hasAttribute('aria-valuemin')) {
@@ -5251,7 +5306,7 @@
       }
 
       $.data(handle, 'bar', $(handle).parent());
-      $.data(handle, 'settings', settings);
+      return $.data(handle, 'settings', settings);
     },
 
     set_initial_position : function ($ele) {
@@ -5296,7 +5351,7 @@
   Foundation.libs.tab = {
     name : 'tab',
 
-    version : '5.5.1',
+    version : '5.5.2',
 
     settings : {
       active_class : 'active',
@@ -5520,8 +5575,8 @@
       target.siblings().removeClass(settings.active_class).attr({'aria-hidden' : 'true',  tabindex : -1});
       target.addClass(settings.active_class).attr('aria-hidden', 'false').removeAttr('tabindex');
       settings.callback(tab);
-      target.triggerHandler('toggled', [tab]);
-      tabs.triggerHandler('toggled', [target]);
+      target.triggerHandler('toggled', [target]);
+      tabs.triggerHandler('toggled', [tab]);
 
       tab_link.off('keydown').on('keydown', interpret_keyup_action );
     },
@@ -5546,7 +5601,7 @@
   Foundation.libs.tooltip = {
     name : 'tooltip',
 
-    version : '5.5.1',
+    version : '5.5.2',
 
     settings : {
       additional_inheritable_classes : [],
@@ -5555,6 +5610,8 @@
       touch_close_text : 'Tap To Close',
       disable_for_touch : false,
       hover_delay : 200,
+      fade_in_duration : 150,
+      fade_out_duration : 150,
       show_on : 'all',
       tip_template : function (selector, content) {
         return '<span data-selector="' + selector + '" id="' + selector + '" class="'
@@ -5786,7 +5843,13 @@
           nub.addClass('rtl');
           left = target.offset().left + target.outerWidth() - tip.outerWidth();
         }
+
         objPos(tip, (target.offset().top + target.outerHeight() + 10), 'auto', 'auto', left);
+        // reset nub from small styles, if they've been applied
+        if (nub.attr('style')) {
+          nub.removeAttr('style');
+        }
+        
         tip.removeClass('tip-override');
         if (classes && classes.indexOf('tip-top') > -1) {
           if (Foundation.rtl) {
@@ -5843,19 +5906,19 @@
 
     show : function ($target) {
       var $tip = this.getTip($target);
-
       if ($target.data('tooltip-open-event-type') == 'touch') {
         this.convert_to_touch($target);
       }
 
       this.reposition($target, $tip, $target.attr('class'));
       $target.addClass('open');
-      $tip.fadeIn(150);
+      $tip.fadeIn(this.settings.fade_in_duration);
     },
 
     hide : function ($target) {
       var $tip = this.getTip($target);
-      $tip.fadeOut(150, function () {
+
+      $tip.fadeOut(this.settings.fade_out_duration, function () {
         $tip.find('.tap-to-close').remove();
         $tip.off('click.fndtn.tooltip.tapclose MSPointerDown.fndtn.tapclose');
         $target.removeClass('open');
@@ -5880,7 +5943,7 @@
   Foundation.libs.topbar = {
     name : 'topbar',
 
-    version : '5.5.1',
+    version : '5.5.2',
 
     settings : {
       index : 0,
@@ -6254,7 +6317,7 @@
         if (!$dropdown.find('.title.back').length) {
 
           if (settings.mobile_show_parent_link == true && url) {
-            $titleLi = $('<li class="title back js-generated"><h5><a href="javascript:void(0)"></a></h5></li><li class="parent-link hide-for-large-up"><a class="parent-link js-generated" href="' + url + '">' + $link.html() +'</a></li>');
+            $titleLi = $('<li class="title back js-generated"><h5><a href="javascript:void(0)"></a></h5></li><li class="parent-link hide-for-medium-up"><a class="parent-link js-generated" href="' + url + '">' + $link.html() +'</a></li>');
           } else {
             $titleLi = $('<li class="title back js-generated"><h5><a href="javascript:void(0)"></a></h5>');
           }
